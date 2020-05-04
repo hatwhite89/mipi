@@ -5,8 +5,8 @@ Public Class clsConexcion
     Public str_con As String
     'String Conexion
     Public Sub New()
-        str_con = "Data Source=DESKTOP-9C0CHLT\SQLEXPRESS ;Initial Catalog=unicef_core; Min Pool Size=0;Max Pool Size=1024;Pooling=true;  Integrated Security = True;"
-        'str_con = "Data Source=SQL5052.site4now.net;Initial Catalog=DB_A572A4_unicefmipi;User Id=DB_A572A4_unicefmipi_admin;Password=@Tatiana1987;"
+        'str_con = "Data Source=DESKTOP-9C0CHLT\SQLEXPRESS ;Initial Catalog=unicef_core; Min Pool Size=0;Max Pool Size=1024;Pooling=true;  Integrated Security = True;"
+        str_con = "Data Source=sql5059.site4now.net;Initial Catalog=DB_A572A4_unicefmipi;User Id=DB_A572A4_unicefmipi_admin;Password=@Tatiana1987;"
     End Sub
 
     Public Function getConexion() As SqlConnection

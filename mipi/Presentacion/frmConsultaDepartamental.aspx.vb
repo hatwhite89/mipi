@@ -1,35 +1,67 @@
-﻿Public Class frmConsultaDepartamental
+﻿Imports System.Data.SqlClient
+
+Public Class frmConsultaDepartamental
     Inherits System.Web.UI.Page
 
     Dim nombre As String
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+        Try
+            'llenar combobox
+            Dim clsD As New clsDepartamento
+            Dim ds As New DataTable
 
-        'llenar combobox
-        Dim clsD As New clsDepartamento
-        Dim ds As New DataTable
+            ds.Load(clsD.RecuperarDepartamentos())
+            If IsPostBack = False Then
+                DropDownListDepartamentos.DataSource = ds
+                DropDownListDepartamentos.DataTextField = "nombre_departamento"
+                DropDownListDepartamentos.DataValueField = "id_departamento"
+                DropDownListDepartamentos.DataBind()
+            End If
 
-        ds.Load(clsD.RecuperarDepartamentos())
-        If IsPostBack = False Then
-            DropDownListDepartamentos.DataSource = ds
-            DropDownListDepartamentos.DataTextField = "nombre_departamento"
-            DropDownListDepartamentos.DataValueField = "id_departamento"
-            DropDownListDepartamentos.DataBind()
-        End If
+            'llenar combobox servicio
+            Dim clsS As New clsServicio
+            Dim ds1 As New DataTable
 
-        'llenar combobox servicio
-        Dim clsS As New clsServicio
-        Dim ds1 As New DataTable
+            ds1.Load(clsS.RecuperarServicios())
+            If IsPostBack = False Then
+                DropDownServicio.DataSource = ds1
+                DropDownServicio.DataTextField = "nombre_servicio"
+                DropDownServicio.DataValueField = "id_servicio"
+                DropDownServicio.DataBind()
 
-        ds1.Load(clsS.RecuperarServicios())
-        If IsPostBack = False Then
-            DropDownServicio.DataSource = ds1
-            DropDownServicio.DataTextField = "nombre_servicio"
-            DropDownServicio.DataValueField = "id_servicio"
-            DropDownServicio.DataBind()
-
-        End If
+            End If
+            Dim clsConectin As New clsConexcion
+            Using sqlCon = New SqlConnection(clsConectin.str_con)
 
 
+
+                Dim CmdString As String = "SELECT * from municipio"
+                Dim sda As SqlDataAdapter = New SqlDataAdapter(CmdString, sqlCon)
+                Dim ds2 As DataSet = New DataSet()
+                sda.Fill(ds2)
+                Chart1.DataSource = ds2
+                Chart1.Series("Series1").XValueMember = "id_municipio"
+                Chart1.Series("Series1").YValueMembers = "id_municipio"
+                Chart1.DataBind()
+                ' chart 2
+                Chart2.DataSource = ds2
+                Chart2.Series("Series1").XValueMember = "id_municipio"
+                Chart2.Series("Series1").YValueMembers = "id_municipio"
+                Chart2.DataBind()
+                'chart3
+                Chart3.DataSource = ds2
+                Chart3.Series("Series1").XValueMember = "id_municipio"
+                Chart3.Series("Series1").YValueMembers = "id_municipio"
+                Chart3.DataBind()
+                'chart4
+                Chart4.DataSource = ds2
+                Chart4.Series("Series1").XValueMember = "id_municipio"
+                Chart4.Series("Series1").YValueMembers = "id_municipio"
+                Chart4.DataBind()
+            End Using
+        Catch ex As Exception
+
+        End Try
 
 
     End Sub

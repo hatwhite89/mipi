@@ -2,7 +2,7 @@
 
 Public Class clsUsuario
     'variables
-    Dim id_usuario, id_tipo_usuario As Integer
+    Dim id_usuario, id_tipo_usuario, id_rol As Integer
     Dim nombre_usuario, password As String
     Dim fecha_creacion As Date
     Dim estado As Byte
@@ -67,6 +67,15 @@ Public Class clsUsuario
         End Set
     End Property
 
+    Public Property Id_rol1 As Integer
+        Get
+            Return id_rol
+        End Get
+        Set(value As Integer)
+            id_rol = value
+        End Set
+    End Property
+
     Public Function AgregarUsuario() As Integer
         Dim sqlcom As SqlCommand
         Dim sqlpar As SqlParameter
@@ -99,6 +108,11 @@ Public Class clsUsuario
         sqlpar = New SqlParameter
         sqlpar.ParameterName = "id_tipo_usuario"
         sqlpar.Value = IdTipoUsuario
+        sqlcom.Parameters.Add(sqlpar)
+
+        sqlpar = New SqlParameter
+        sqlpar.ParameterName = "id_rol"
+        sqlpar.Value = Id_rol1
         sqlcom.Parameters.Add(sqlpar)
 
         sqlpar = New SqlParameter
@@ -151,6 +165,11 @@ Public Class clsUsuario
         sqlpar = New SqlParameter
         sqlpar.ParameterName = "id_tipo_usuario"
         sqlpar.Value = IdTipoUsuario
+        sqlcom.Parameters.Add(sqlpar)
+
+        sqlpar = New SqlParameter
+        sqlpar.ParameterName = "id_rol"
+        sqlpar.Value = Id_rol1
         sqlcom.Parameters.Add(sqlpar)
 
         sqlpar = New SqlParameter
@@ -217,8 +236,8 @@ Public Class clsUsuario
     Public Function RecuperarUsuario() As SqlDataReader
         Dim sqlcom As SqlCommand
         sqlcom = New SqlCommand
-        sqlcom.CommandText = "select u.id_usuario,u.nombre_usuario,CAST(DECRYPTBYPASSPHRASE('unicef2020', u.password_usuario)AS VARCHAR(MAX)) as password_usuario,u.estado,u.fecha_creacion,u.id_tipo_usuario,t.nombre_tipo_usuario from Usuario u, TipoUsuario t
-where u.id_tipo_usuario = t.id_tipo_usuario"
+        sqlcom.CommandText = "select u.id_usuario,u.nombre_usuario,CAST(DECRYPTBYPASSPHRASE('unicef2020', u.password_usuario)AS VARCHAR(MAX)) as password_usuario,u.estado,u.fecha_creacion,u.id_tipo_usuario,t.nombre_tipo_usuario,r.nombre_rol from Usuario u, TipoUsuario t,Rol r
+where u.id_tipo_usuario = t.id_tipo_usuario and u.id_rol = r.id_rol"
         sqlcom.Connection = New clsConexcion().getConexion
         Return sqlcom.ExecuteReader
     End Function
@@ -320,5 +339,21 @@ where u.id_tipo_usuario = t.id_tipo_usuario"
         par_sal = sqlcom.Parameters("salida").Value
 
         Return par_sal
+    End Function
+
+    Public Function RecuperarAccesosUsuario(ByVal id_usuario As String, ByVal variable As String) As SqlDataReader
+        Dim sqlcom As SqlCommand
+        sqlcom = New SqlCommand
+        sqlcom.CommandText = "select * from Usuario u, AccesoRol ar, Rol r where u.id_rol= r.id_rol and r.id_rol =ar.id_rol and u.id_usuario='" + id_usuario + "' and ar.nombre_variable='" + variable + "'"
+        sqlcom.Connection = New clsConexcion().getConexion
+        Return sqlcom.ExecuteReader
+    End Function
+
+    Public Function RecuperarCodUser(ByVal usuario As String) As Integer
+        Dim sqlcom As SqlCommand
+        sqlcom = New SqlCommand
+        sqlcom.CommandText = "select id_usuario from Usuario where nombre_usuario='" + usuario + "' "
+        sqlcom.Connection = New clsConexcion().getConexion
+        Return sqlcom.ExecuteScalar
     End Function
 End Class

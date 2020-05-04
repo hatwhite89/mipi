@@ -144,6 +144,7 @@
     <Import Include="System.Web.UI.HtmlControls" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\1920.png" />
     <Content Include="Content\html\assets\bundles\apexcharts.bundle.js" />
     <Content Include="Content\html\assets\bundles\c3.bundle.js" />
     <Content Include="Content\html\assets\bundles\chartist.bundle.js" />
@@ -159,6 +160,7 @@
     <Content Include="Content\html\assets\bundles\vendorscripts.bundle.js" />
     <Content Include="Content\html\assets\css\demo.css" />
     <Content Include="Content\html\assets\css\site.min.css" />
+    <Content Include="Content\html\assets\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Content\html\assets\fonts\simple-Line-Icons.svg" />
     <Content Include="Content\html\assets\fonts\weathericons-regular-webfont.svg" />
     <Content Include="Content\html\assets\js\common.js" />
@@ -3719,11 +3721,15 @@
     <Content Include="Content\assets\vendor\x_full_calendar\jquery\jquery-1.10.2.js" />
     <Content Include="Content\assets\vendor\x_full_calendar\jquery\jquery-ui.custom.min.js" />
     <Content Include="Content\imagenes\candado.png" />
+    <Content Include="Content\imagenes\logo_left.png" />
     <Content Include="Content\imagenes\logo_mipi.png" />
+    <Content Include="Content\imagenes\mipi.png" />
+    <Content Include="Content\Sin título-1.png" />
     <Content Include="Presentacion\Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Presentacion\frmAcceso.aspx" />
+    <Content Include="Presentacion\frmAccesoRol.aspx" />
     <Content Include="Presentacion\frmConsultaDepartamental.aspx" />
     <Content Include="Presentacion\frmConsultaNominal.aspx" />
     <Content Include="Presentacion\frmDepartamento.aspx" />
@@ -3890,6 +3896,7 @@
     <Content Include="Presentacion\frmCategoriaServicio.aspx" />
     <Content Include="Presentacion\frmMunicipio.aspx" />
     <Content Include="Presentacion\frmPrivilegio.aspx" />
+    <Content Include="Presentacion\frmRol.aspx" />
     <Content Include="Presentacion\frmServicios.aspx" />
     <Content Include="Presentacion\frmTema.aspx" />
     <Content Include="Presentacion\frmTipoUsuario.aspx" />
@@ -3941,9 +3948,11 @@
     <Compile Include="App_Start\RouteConfig.vb" />
     <Compile Include="conexcion\clsConexcion.vb" />
     <Compile Include="conexcion\clsWebService.vb" />
+    <Compile Include="Negocio\clsAccesoRol.vb" />
     <Compile Include="Negocio\clsDepartamento.vb" />
     <Compile Include="Negocio\clsMenuAdmin.vb" />
     <Compile Include="Negocio\clsMunicipio.vb" />
+    <Compile Include="Negocio\clsRol.vb" />
     <Compile Include="Negocio\clsTema.vb" />
     <Compile Include="Presentacion\Default.aspx.vb">
       <SubType>ASPXCodeBehind</SubType>
@@ -3958,6 +3967,13 @@
     </Compile>
     <Compile Include="Presentacion\frmAcceso.aspx.vb">
       <DependentUpon>frmAcceso.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmAccesoRol.aspx.designer.vb">
+      <DependentUpon>frmAccesoRol.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmAccesoRol.aspx.vb">
+      <DependentUpon>frmAccesoRol.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Presentacion\frmConsultaDepartamental.aspx.designer.vb">
@@ -4045,6 +4061,13 @@
       <DependentUpon>frmPrivilegio.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="Presentacion\frmRol.aspx.designer.vb">
+      <DependentUpon>frmRol.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmRol.aspx.vb">
+      <DependentUpon>frmRol.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="Presentacion\frmServicios.aspx.designer.vb">
       <DependentUpon>frmServicios.aspx</DependentUpon>
     </Compile>
@@ -4112,6 +4135,10 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\html\assets\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\html\assets\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\html\assets\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\html\assets\fonts\glyphicons-halflings-regular.woff2" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>

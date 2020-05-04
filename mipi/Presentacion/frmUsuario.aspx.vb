@@ -14,6 +14,19 @@
             DropDownList1.DataValueField = "id_tipo_usuario"
             DropDownList1.DataBind()
         End If
+        'llenar combobox con los servicios
+        Dim clsR As New clsRol
+        Dim ds2 As New DataTable
+
+        ds2.Load(clsR.RecuperarRoles())
+        If IsPostBack = False Then
+
+            DropDownList2.DataSource = ds2
+            DropDownList2.DataTextField = "nombre_rol"
+            DropDownList2.DataValueField = "id_rol"
+            DropDownList2.DataBind()
+        End If
+
         'llenar el data gried
         Dim clsU2 As New clsUsuario
         Dim TableUsuario As New DataTable
@@ -21,6 +34,8 @@
 
         GridView1.DataSource = TableUsuario
         GridView1.DataBind()
+
+
     End Sub
 
     Protected Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
@@ -34,6 +49,7 @@
                 .PasswordUsuario = txtPassword.Text
                 .EstadoUsuario = rblEstado.SelectedValue
                 .IdTipoUsuario = Integer.Parse(DropDownList1.SelectedValue)
+                .Id_rol1 = Integer.Parse(DropDownList2.SelectedValue)
 
             End With
             If clsU.ActualizarUsuarioPassword() = "1" Then
@@ -47,6 +63,7 @@
                 .NombreUsuario = txtNombreUsuario.Text
                 .EstadoUsuario = rblEstado.SelectedValue
                 .IdTipoUsuario = Integer.Parse(DropDownList1.SelectedValue)
+                .Id_rol1 = Integer.Parse(DropDownList2.SelectedValue)
             End With
             If clsU.ActualizarUsuario() = "1" Then
 
@@ -62,11 +79,12 @@
             .PasswordUsuario = txtPassword.Text
             .EstadoUsuario = rblEstado.SelectedValue
             .IdTipoUsuario = Integer.Parse(DropDownList1.SelectedValue)
+            .Id_rol1 = Integer.Parse(DropDownList2.SelectedValue)
 
         End With
         If clsU.AgregarUsuario = "1" Then
-            MsgBox("Se ha agregado el nuevo usuario exitosamente")
-            Response.Redirect("frmUsuario.aspx")
+
+            Response.Redirect("frmUsuario.aspx?r=1")
         End If
     End Sub
 
@@ -80,6 +98,7 @@
         Dim id As Integer = Convert.ToInt32(GridView1.DataKeys(row.RowIndex).Values("id_usuario"))
         Dim estado As Boolean = Boolean.Parse(GridView1.DataKeys(row.RowIndex).Values("estado"))
         Dim id_tipo_usuario As Integer = Convert.ToInt32(GridView1.DataKeys(row.RowIndex).Values("id_tipo_usuario"))
+        Dim id_rol As Integer = Convert.ToInt32(GridView1.DataKeys(row.RowIndex).Values("id_rol"))
         Dim nombre As String = Convert.ToString(GridView1.DataKeys(row.RowIndex).Values("nombre_usuario"))
         Dim password As String = Convert.ToString(GridView1.DataKeys(row.RowIndex).Values("password_usuario"))
         txtNombreUsuario.Text = nombre
@@ -88,6 +107,9 @@
 
         DropDownList1.DataTextField = "nombre_tipo_usuario"
         DropDownList1.SelectedValue = Convert.ToInt32(GridView1.DataKeys(row.RowIndex).Values("id_tipo_usuario"))
+
+        DropDownList2.DataTextField = "nombre_rol"
+        DropDownList2.SelectedValue = Convert.ToInt32(GridView1.DataKeys(row.RowIndex).Values("id_rol"))
         If estado = False Then
             rblEstado.Items.FindByText("Habilitado").Selected = False
             rblEstado.Items.FindByText("Inhabilitado").Selected = True

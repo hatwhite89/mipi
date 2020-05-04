@@ -68,15 +68,6 @@ Partial Public Class frmConsultaDepartamental
     Protected WithEvents Label2 As Global.System.Web.UI.WebControls.Label
     
     '''<summary>
-    '''Control Chart3.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents Chart3 As Global.System.Web.UI.DataVisualization.Charting.Chart
-    
-    '''<summary>
     '''Control Chart4.
     '''</summary>
     '''<remarks>
@@ -84,6 +75,15 @@ Partial Public Class frmConsultaDepartamental
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents Chart4 As Global.System.Web.UI.DataVisualization.Charting.Chart
+    
+    '''<summary>
+    '''Control Chart3.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents Chart3 As Global.System.Web.UI.DataVisualization.Charting.Chart
     
     '''<summary>
     '''Control Label3.
@@ -120,13 +120,4 @@ Partial Public Class frmConsultaDepartamental
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents Chart1 As Global.System.Web.UI.DataVisualization.Charting.Chart
-    
-    '''<summary>
-    '''Control SqlDataSource1.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents SqlDataSource1 As Global.System.Web.UI.WebControls.SqlDataSource
 End Class

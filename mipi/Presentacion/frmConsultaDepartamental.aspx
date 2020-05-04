@@ -69,9 +69,9 @@
                             <h2>Tendencia Prestaciones Departamento <asp:Label ID="Label2" runat="server" /></h2>
                         </div>
                         <div class="body">
-                            <asp:Chart ID="Chart3" runat="server" DataSourceID="SqlDataSource1">
+                            <asp:Chart ID="Chart4" runat="server">
                                 <Series>
-                                    <asp:Series Name="Series1" ChartType="Line" XValueMember="nombre_departamento" YValueMembers="id_departamento"></asp:Series>
+                                    <asp:Series Name="Series1" ChartType="Line"></asp:Series>
                                 </Series>
                                 <ChartAreas>
                                     <asp:ChartArea Name="ChartArea1"></asp:ChartArea>
@@ -86,9 +86,9 @@
                             <h2>Cobertura de Prestaciones de Acuerdo a Edad</h2>
                         </div>
                         <div class="body">
-                            <asp:Chart ID="Chart4" runat="server" DataSourceID="SqlDataSource1">
+                            <asp:Chart ID="Chart3" runat="server">
                                 <Series>
-                                    <asp:Series Name="Series1" ChartType="Spline" XValueMember="nombre_departamento" YValueMembers="id_departamento"></asp:Series>
+                                    <asp:Series Name="Series1" ChartType="Bar"></asp:Series>
                                 </Series>
                                 <ChartAreas>
                                     <asp:ChartArea Name="ChartArea1"></asp:ChartArea>
@@ -105,9 +105,9 @@
                             <h2>Porcentaje por Prestaciones en Departamento  <asp:Label ID="Label3" runat="server" /></h2>
                         </div>
                         <div class="body">
-                            <asp:Chart ID="Chart2" runat="server" BackImageAlignment="Center" CssClass="mt-4 c3" DataSourceID="SqlDataSource1"  >
+                            <asp:Chart ID="Chart2" runat="server">
                                 <Series>
-                                    <asp:Series Name="Series1" XValueMember="nombre_departamento" YValueMembers="id_departamento"></asp:Series>
+                                    <asp:Series Name="Series1"></asp:Series>
                                 </Series>
                                 <ChartAreas>
                                     <asp:ChartArea Name="ChartArea1"></asp:ChartArea>
@@ -122,15 +122,14 @@
                             <h2>Porcentaje de Prestaciones por Departamento <asp:Label ID="Label4" runat="server" /></h2>
                         </div>
                         <div class="body">
-                            <asp:Chart ID="Chart1" runat="server" DataSourceID="SqlDataSource1">
+                            <asp:Chart ID="Chart1" runat="server">
                                 <Series>
-                                    <asp:Series Name="Series1" ChartType="Radar" XValueMember="nombre_departamento" YValueMembers="id_departamento"></asp:Series>
+                                    <asp:Series Name="Series1" ChartType="Radar"></asp:Series>
                                 </Series>
                                 <ChartAreas>
                                     <asp:ChartArea Name="ChartArea1"></asp:ChartArea>
                                 </ChartAreas>
                             </asp:Chart>
-                            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:unicef_coreConnectionString %>" SelectCommand="SELECT [nombre_departamento], [id_departamento] FROM [Departamento]"></asp:SqlDataSource>
                         </div>
                     </div>
                 </div>

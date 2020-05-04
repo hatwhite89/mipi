@@ -113,9 +113,9 @@ window.onclick = function(event) {
 </script>
 </head>
 
-<body class="theme-cyan font-montserrat" onload="javascript:showModal();">
+<body class="font-montserrat" onload="javascript:showModal();" style="background-image: url(../Content/1920.png); background-repeat: no-repeat; background-size:cover;">
 <!-- Page Loader -->
-
+  
       <div id="myModal" class="modal2">
  <!-- Modal content -->
         <div class="modal-content2">
@@ -123,24 +123,24 @@ window.onclick = function(event) {
             <p class="text-center" id="textoFlag">Se ha registrado exitosamente</p>
         </div>
     </div>
-<div class="auth-main particles_js">
-    <div class="auth_div vivify popIn">
+<div class="auth-main ">
+    <div class="auth_div ">
         <div class="auth_brand">
-            <a class="navbar-brand" href="javascript:void(0);"><img src="../Content/imagenes/candado.png"  width="50" height="50" class="d-inline-block align-top mr-2" alt="">MIPI</a>
+            <a class="navbar-brand" href="javascript:void(0);"><img src="../Content/imagenes/mipi.png"   class="d-inline-block align-top mr-2" alt=""></a>
         </div>
         <div class="card">
             <div class="body">
-                <p class="lead">Ingrese a su cuenta</p>
+                <p class="lead" style="color:blue;">Ingrese a su cuenta</p>
                 <br />
              <form runat="server">
                     <div class="form-group">
                         <label for="signin-email" class="control-label sr-only">Usuario</label>
-                        <asp:TextBox ID="txtNombreUsuario" runat="server" CssClass="form-control round"  placeholder="Ingrese usuario"/>
+                        <asp:TextBox ID="txtNombreUsuario" runat="server" CssClass="form-control round"  placeholder="Ingrese usuario" style="border-color:blue;"/>
                        
                     </div>
                     <div class="form-group">
                         <label for="signin-password" class="control-label sr-only">Password</label>
-                         <asp:TextBox ID="txtPassword" TextMode="Password" runat="server" CssClass="form-control round"  placeholder="Ingrese password"/>
+                         <asp:TextBox ID="txtPassword" TextMode="Password" runat="server" CssClass="form-control round"  placeholder="Ingrese password" style="border-color:blue;"/>
                      
                       
                     </div>
@@ -155,7 +155,7 @@ window.onclick = function(event) {
             </div>
         </div>
     </div>
-    <div id="particles-js"></div>
+  
   
 
 </div>

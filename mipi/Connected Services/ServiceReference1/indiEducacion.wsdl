@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="ListMatriculaPreBasicaDepartamento">
+        <s:complexType />
+      </s:element>
+      <s:element name="ListMatriculaPreBasicaDepartamentoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListMatriculaPreBasicaDepartamentoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListMatriculaPreBasicaMunicipio">
+        <s:complexType />
+      </s:element>
+      <s:element name="ListMatriculaPreBasicaMunicipioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListMatriculaPreBasicaMunicipioResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ListMatriculaPreBasicaDepartamentoSoapIn">
+    <wsdl:part name="parameters" element="tns:ListMatriculaPreBasicaDepartamento" />
+  </wsdl:message>
+  <wsdl:message name="ListMatriculaPreBasicaDepartamentoSoapOut">
+    <wsdl:part name="parameters" element="tns:ListMatriculaPreBasicaDepartamentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListMatriculaPreBasicaMunicipioSoapIn">
+    <wsdl:part name="parameters" element="tns:ListMatriculaPreBasicaMunicipio" />
+  </wsdl:message>
+  <wsdl:message name="ListMatriculaPreBasicaMunicipioSoapOut">
+    <wsdl:part name="parameters" element="tns:ListMatriculaPreBasicaMunicipioResponse" />
+  </wsdl:message>
+  <wsdl:portType name="rnpSoap">
+    <wsdl:operation name="ListMatriculaPreBasicaDepartamento">
+      <wsdl:input message="tns:ListMatriculaPreBasicaDepartamentoSoapIn" />
+      <wsdl:output message="tns:ListMatriculaPreBasicaDepartamentoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListMatriculaPreBasicaMunicipio">
+      <wsdl:input message="tns:ListMatriculaPreBasicaMunicipioSoapIn" />
+      <wsdl:output message="tns:ListMatriculaPreBasicaMunicipioSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="rnpSoap" type="tns:rnpSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ListMatriculaPreBasicaDepartamento">
+      <soap:operation soapAction="http://tempuri.org/ListMatriculaPreBasicaDepartamento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListMatriculaPreBasicaMunicipio">
+      <soap:operation soapAction="http://tempuri.org/ListMatriculaPreBasicaMunicipio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="rnpSoap12" type="tns:rnpSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ListMatriculaPreBasicaDepartamento">
+      <soap12:operation soapAction="http://tempuri.org/ListMatriculaPreBasicaDepartamento" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListMatriculaPreBasicaMunicipio">
+      <soap12:operation soapAction="http://tempuri.org/ListMatriculaPreBasicaMunicipio" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="rnp">
+    <wsdl:port name="rnpSoap" binding="tns:rnpSoap">
+      <soap:address location="https://wsmipi20200505123507.azurewebsites.net/indiEducacion.asmx" />
+    </wsdl:port>
+    <wsdl:port name="rnpSoap12" binding="tns:rnpSoap12">
+      <soap12:address location="https://wsmipi20200505123507.azurewebsites.net/indiEducacion.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

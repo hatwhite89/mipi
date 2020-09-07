@@ -46,19 +46,65 @@
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DevExpress.Data.v18.1, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Printing.v18.1.Core, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.RichEdit.v18.1.Core, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Web.ASPxThemes.v18.1, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Web.Bootstrap.v18.1, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Web.Resources.v18.1, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Web.v18.1, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="ClosedXML, Version=0.95.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ClosedXML.0.95.3\lib\net46\ClosedXML.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Web, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="DocumentFormat.OpenXml, Version=2.7.2.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.2.7.2\lib\net46\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelNumberFormat, Version=1.0.10.0, Culture=neutral, PublicKeyToken=23c6f5d73be07eca, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelNumberFormat.1.0.10\lib\net20\ExcelNumberFormat.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1404.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1404.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1404.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1404.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebDesign, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1404.0\lib\net40\Microsoft.ReportViewer.WebDesign.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1404.0\lib\net40\Microsoft.ReportViewer.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Core" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.IO.FileSystem.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.FileSystem.Primitives.4.0.1\lib\net46\System.IO.FileSystem.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Packaging, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Packaging.4.0.0\lib\net46\System.IO.Packaging.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.DataVisualization" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
@@ -107,6 +153,7 @@
     <Reference Include="Microsoft.AspNet.FriendlyUrls">
       <HintPath>..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
     </Reference>
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System.Diagnostics.DiagnosticSource">
@@ -144,7 +191,59 @@
     <Import Include="System.Web.UI.HtmlControls" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Connected Services\ServiceReference2\indiEducacion.disco" />
+    <None Include="Connected Services\ServiceReference2\configuration91.svcinfo" />
+    <None Include="Connected Services\ServiceReference2\configuration.svcinfo" />
+    <None Include="Connected Services\ServiceReference2\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Connected Services\ServiceReference3\indiEducacion.wsdl" />
+    <None Include="Connected Services\WsRNP\RNP_MIPI.wsdl" />
+    <None Include="Connected Services\WsSace\SIM_SACE.disco" />
+    <None Include="Connected Services\WsSace\configuration91.svcinfo" />
+    <None Include="Connected Services\WsSace\configuration.svcinfo" />
+    <None Include="Connected Services\WsSace\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Connected Services\WsRNP\RNP_MIPI.disco" />
+    <None Include="Connected Services\WsRNP\configuration91.svcinfo" />
+    <None Include="Connected Services\WsRNP\configuration.svcinfo" />
+    <None Include="Connected Services\WsRNP\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Connected Services\ServiceReference3\indiEducacion.disco" />
+    <None Include="Connected Services\ServiceReference3\configuration91.svcinfo" />
+    <None Include="Connected Services\ServiceReference3\configuration.svcinfo" />
+    <None Include="Connected Services\ServiceReference3\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
     <Content Include="Content\1920.png" />
+    <Content Include="Content\departamentos\atlantida.png" />
+    <Content Include="Content\departamentos\choluteca.png" />
+    <Content Include="Content\departamentos\colon.png" />
+    <Content Include="Content\departamentos\comayagua.png" />
+    <Content Include="Content\departamentos\copan.png" />
+    <Content Include="Content\departamentos\cortes.png" />
+    <Content Include="Content\departamentos\elparaiso.png" />
+    <Content Include="Content\departamentos\fm.png" />
+    <Content Include="Content\departamentos\gracias.png" />
+    <Content Include="Content\departamentos\intibuca.png" />
+    <Content Include="Content\departamentos\islas.png" />
+    <Content Include="Content\departamentos\lapaz.png" />
+    <Content Include="Content\departamentos\lempira.png" />
+    <Content Include="Content\departamentos\ocotepeque.png" />
+    <Content Include="Content\departamentos\olancho.png" />
+    <Content Include="Content\departamentos\santa.png" />
+    <Content Include="Content\departamentos\valle.png" />
+    <Content Include="Content\departamentos\yoro.png" />
+    <Content Include="Content\encabezado_depar.png" />
+    <Content Include="Content\encabezado_muni.png" />
+    <Content Include="Content\fondo_index.png" />
+    <Content Include="Content\gobierno.jpg" />
     <Content Include="Content\html\assets\bundles\apexcharts.bundle.js" />
     <Content Include="Content\html\assets\bundles\c3.bundle.js" />
     <Content Include="Content\html\assets\bundles\chartist.bundle.js" />
@@ -3724,16 +3823,41 @@
     <Content Include="Content\imagenes\logo_left.png" />
     <Content Include="Content\imagenes\logo_mipi.png" />
     <Content Include="Content\imagenes\mipi.png" />
+    <Content Include="Content\sedis.jpg" />
     <Content Include="Content\Sin título-1.png" />
+    <Content Include="Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Model1.Context.vb</LastGenOutput>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
+    <Content Include="Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.vb</LastGenOutput>
+    </Content>
     <Content Include="Presentacion\Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Presentacion\frmAcceso.aspx" />
     <Content Include="Presentacion\frmAccesoRol.aspx" />
+    <Content Include="Presentacion\frmAyuda.aspx" />
+    <Content Include="Presentacion\frmBitacoras.aspx" />
+    <Content Include="Presentacion\frmCoberturaNominal.aspx" />
     <Content Include="Presentacion\frmConsultaDepartamental.aspx" />
+    <Content Include="Presentacion\frmConsultaDepartamentalMC.aspx" />
+    <Content Include="Presentacion\frmConsultaDepartamentalPM.aspx" />
+    <Content Include="Presentacion\frmConsultaMunicipal.aspx" />
+    <Content Include="Presentacion\frmConsultaMunicipal2.aspx" />
+    <Content Include="Presentacion\frmConsultaMunicipalMC.aspx" />
+    <Content Include="Presentacion\frmConsultaMunicipalPM.aspx" />
+    <Content Include="Presentacion\frmConsultaNacional.aspx" />
+    <Content Include="Presentacion\frmConsultaNacionalMC.aspx" />
+    <Content Include="Presentacion\frmConsultaNacionalPM.aspx" />
     <Content Include="Presentacion\frmConsultaNominal.aspx" />
     <Content Include="Presentacion\frmDepartamento.aspx" />
+    <Content Include="Presentacion\frmFichasIndicadores.aspx" />
     <Content Include="Presentacion\frmIndicador.aspx" />
+    <Content Include="Presentacion\frmInscripcionNacimiento.aspx" />
     <Content Include="Presentacion\frmLogin.aspx" />
     <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -3895,9 +4019,15 @@
     <Content Include="Content\assets\vendor\x_full_calendar\jquery\.DS_Store" />
     <Content Include="Presentacion\frmCategoriaServicio.aspx" />
     <Content Include="Presentacion\frmMunicipio.aspx" />
+    <Content Include="Presentacion\frmNosotros.aspx" />
+    <Content Include="Presentacion\frmPrestacionesDepartamental.aspx" />
+    <Content Include="Presentacion\frmPrestacionesNacional.aspx" />
     <Content Include="Presentacion\frmPrivilegio.aspx" />
+    <Content Include="Presentacion\frmReporteDepartamental.aspx" />
     <Content Include="Presentacion\frmRol.aspx" />
     <Content Include="Presentacion\frmServicios.aspx" />
+    <Content Include="Presentacion\frmSubirExcelDesnutricion.aspx" />
+    <Content Include="Presentacion\frmSubirFichasIndicador.aspx" />
     <Content Include="Presentacion\frmTema.aspx" />
     <Content Include="Presentacion\frmTipoUsuario.aspx" />
     <Content Include="Presentacion\frmTipoUsuarioAccesos.aspx" />
@@ -3936,6 +4066,20 @@
     <Content Include="Scripts\WebForms\WebForms.js" />
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="SqlServerTypes\Loader.cs" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -3948,11 +4092,59 @@
     <Compile Include="App_Start\RouteConfig.vb" />
     <Compile Include="conexcion\clsConexcion.vb" />
     <Compile Include="conexcion\clsWebService.vb" />
+    <Compile Include="Connected Services\ServiceReference2\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\ServiceReference3\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\WsRNP\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\WsSace\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="CrystalReport1.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="mipiDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>mipiDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Context.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Negocio\clsAccesoRol.vb" />
+    <Compile Include="Negocio\clsBitacora.vb" />
     <Compile Include="Negocio\clsDepartamento.vb" />
     <Compile Include="Negocio\clsMenuAdmin.vb" />
     <Compile Include="Negocio\clsMunicipio.vb" />
     <Compile Include="Negocio\clsRol.vb" />
+    <Compile Include="Negocio\clsSEDUC.vb" />
     <Compile Include="Negocio\clsTema.vb" />
     <Compile Include="Presentacion\Default.aspx.vb">
       <SubType>ASPXCodeBehind</SubType>
@@ -3976,11 +4168,95 @@
       <DependentUpon>frmAccesoRol.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="Presentacion\frmAyuda.aspx.designer.vb">
+      <DependentUpon>frmAyuda.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmAyuda.aspx.vb">
+      <DependentUpon>frmAyuda.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmBitacoras.aspx.designer.vb">
+      <DependentUpon>frmBitacoras.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmBitacoras.aspx.vb">
+      <DependentUpon>frmBitacoras.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmCoberturaNominal.aspx.designer.vb">
+      <DependentUpon>frmCoberturaNominal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmCoberturaNominal.aspx.vb">
+      <DependentUpon>frmCoberturaNominal.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="Presentacion\frmConsultaDepartamental.aspx.designer.vb">
       <DependentUpon>frmConsultaDepartamental.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\frmConsultaDepartamental.aspx.vb">
       <DependentUpon>frmConsultaDepartamental.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmConsultaDepartamentalMC.aspx.designer.vb">
+      <DependentUpon>frmConsultaDepartamentalMC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmConsultaDepartamentalMC.aspx.vb">
+      <DependentUpon>frmConsultaDepartamentalMC.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmConsultaDepartamentalPM.aspx.designer.vb">
+      <DependentUpon>frmConsultaDepartamentalPM.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmConsultaDepartamentalPM.aspx.vb">
+      <DependentUpon>frmConsultaDepartamentalPM.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmConsultaMunicipal.aspx.designer.vb">
+      <DependentUpon>frmConsultaMunicipal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmConsultaMunicipal.aspx.vb">
+      <DependentUpon>frmConsultaMunicipal.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmConsultaMunicipal2.aspx.designer.vb">
+      <DependentUpon>frmConsultaMunicipal2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmConsultaMunicipal2.aspx.vb">
+      <DependentUpon>frmConsultaMunicipal2.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmConsultaMunicipalMC.aspx.designer.vb">
+      <DependentUpon>frmConsultaMunicipalMC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmConsultaMunicipalMC.aspx.vb">
+      <DependentUpon>frmConsultaMunicipalMC.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmConsultaMunicipalPM.aspx.designer.vb">
+      <DependentUpon>frmConsultaMunicipalPM.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmConsultaMunicipalPM.aspx.vb">
+      <DependentUpon>frmConsultaMunicipalPM.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmConsultaNacional.aspx.designer.vb">
+      <DependentUpon>frmConsultaNacional.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmConsultaNacional.aspx.vb">
+      <DependentUpon>frmConsultaNacional.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmConsultaNacionalMC.aspx.designer.vb">
+      <DependentUpon>frmConsultaNacionalMC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmConsultaNacionalMC.aspx.vb">
+      <DependentUpon>frmConsultaNacionalMC.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmConsultaNacionalPM.aspx.designer.vb">
+      <DependentUpon>frmConsultaNacionalPM.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmConsultaNacionalPM.aspx.vb">
+      <DependentUpon>frmConsultaNacionalPM.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Presentacion\frmConsultaNominal.aspx.designer.vb">
@@ -3997,11 +4273,25 @@
       <DependentUpon>frmDepartamento.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="Presentacion\frmFichasIndicadores.aspx.designer.vb">
+      <DependentUpon>frmFichasIndicadores.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmFichasIndicadores.aspx.vb">
+      <DependentUpon>frmFichasIndicadores.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="Presentacion\frmIndicador.aspx.designer.vb">
       <DependentUpon>frmIndicador.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\frmIndicador.aspx.vb">
       <DependentUpon>frmIndicador.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmInscripcionNacimiento.aspx.designer.vb">
+      <DependentUpon>frmInscripcionNacimiento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmInscripcionNacimiento.aspx.vb">
+      <DependentUpon>frmInscripcionNacimiento.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Presentacion\frmLogin.aspx.designer.vb">
@@ -4054,11 +4344,39 @@
       <DependentUpon>frmMunicipio.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="Presentacion\frmNosotros.aspx.designer.vb">
+      <DependentUpon>frmNosotros.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmNosotros.aspx.vb">
+      <DependentUpon>frmNosotros.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmPrestacionesDepartamental.aspx.designer.vb">
+      <DependentUpon>frmPrestacionesDepartamental.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmPrestacionesDepartamental.aspx.vb">
+      <DependentUpon>frmPrestacionesDepartamental.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmPrestacionesNacional.aspx.designer.vb">
+      <DependentUpon>frmPrestacionesNacional.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmPrestacionesNacional.aspx.vb">
+      <DependentUpon>frmPrestacionesNacional.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="Presentacion\frmPrivilegio.aspx.designer.vb">
       <DependentUpon>frmPrivilegio.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\frmPrivilegio.aspx.vb">
       <DependentUpon>frmPrivilegio.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmReporteDepartamental.aspx.designer.vb">
+      <DependentUpon>frmReporteDepartamental.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmReporteDepartamental.aspx.vb">
+      <DependentUpon>frmReporteDepartamental.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Presentacion\frmRol.aspx.designer.vb">
@@ -4073,6 +4391,20 @@
     </Compile>
     <Compile Include="Presentacion\frmServicios.aspx.vb">
       <DependentUpon>frmServicios.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmSubirExcelDesnutricion.aspx.designer.vb">
+      <DependentUpon>frmSubirExcelDesnutricion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmSubirExcelDesnutricion.aspx.vb">
+      <DependentUpon>frmSubirExcelDesnutricion.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmSubirFichasIndicador.aspx.designer.vb">
+      <DependentUpon>frmSubirFichasIndicador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmSubirFichasIndicador.aspx.vb">
+      <DependentUpon>frmSubirFichasIndicador.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Presentacion\frmTema.aspx.designer.vb">
@@ -4103,6 +4435,9 @@
       <DependentUpon>frmUsuario.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="ReporteDetpartamental_Result.vb">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Site.Master.designer.vb">
       <DependentUpon>Site.Master</DependentUpon>
     </Compile>
@@ -4124,8 +4459,13 @@
     <Compile Include="Site.Mobile.Master.designer.vb">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
+    <Compile Include="WebServices\clsEducacionInicial.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport1.vb</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\licenses.licx" />
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -4133,12 +4473,34 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <Content Include="Report1.rdlc" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\html\assets\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\html\assets\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Content\html\assets\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Content\html\assets\fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="Connected Services\ServiceReference2\indiEducacion.wsdl" />
+    <None Include="Connected Services\WsSace\SIM_SACE.wsdl" />
+    <EntityDeploy Include="Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.vb</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
+    <Content Include="mipiDataSet.xsc">
+      <DependentUpon>mipiDataSet.xsd</DependentUpon>
+    </Content>
+    <Content Include="Fichas\Niños con desnutricion de Intibucá..xlsx" />
+    <None Include="mipiDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>mipiDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="mipiDataSet.xss">
+      <DependentUpon>mipiDataSet.xsd</DependentUpon>
+    </Content>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -4153,6 +4515,7 @@
     <Content Include="Site.Mobile.Master" />
     <Content Include="ViewSwitcher.ascx" />
     <None Include="packages.config" />
+    <Content Include="System.Data.DataSet.datasource" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -4162,11 +4525,22 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Presentacion\Image\" />
     <Folder Include="System\Web\UI\" />
-    <Folder Include="WebServices\" />
+    <Folder Include="Uploads\" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\ServiceReference2\" />
+    <WCFMetadataStorage Include="Connected Services\ServiceReference3\" />
+    <WCFMetadataStorage Include="Connected Services\WsRNP\" />
+    <WCFMetadataStorage Include="Connected Services\WsSace\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

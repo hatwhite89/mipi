@@ -8,6 +8,10 @@ Public Class clsAcceso
     'Constructor
     Public Sub New()
 
+
+    End Sub
+    Public Sub educacionPrebasica()
+
     End Sub
 
     Public Property IdAcceso As Integer

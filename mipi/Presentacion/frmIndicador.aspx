@@ -1,4 +1,4 @@
-﻿<%@ Page Language="vb" MasterPageFile="~/Site.Master" AutoEventWireup="false" CodeBehind="frmIndicador.aspx.vb" Inherits="mipi.frmIndicador" %>
+﻿<%@ Page Title="Indicador" Language="vb" MasterPageFile="~/Site.Master" AutoEventWireup="false" CodeBehind="frmIndicador.aspx.vb" Inherits="mipi.frmIndicador" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <form runat="server">
@@ -64,14 +64,14 @@
             <div class="body table-responsive">
                 <!--tabla para actualizar -->
 
-                <asp:GridView ShowSelectButton="True" ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="id_indicador,nombre_indicador,descripcion,estado,fecha_creacion,nombre_servicio,id_servicio"  CssClass="table table-hover table-custom spacing5">
+                <asp:GridView ShowSelectButton="True" ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="id_indicador,nombre_indicador,descripcion,estado,nombre_servicio,id_servicio"  CssClass="table table-hover table-custom spacing5">
                     <Columns>
-                             <asp:CommandField  ShowSelectButton="True" />
+                             <asp:CommandField  ShowSelectButton="True" SelectText="Seleccionar" />
                         <asp:BoundField DataField="id_indicador" HeaderText="ID INDICADOR" InsertVisible="False" ReadOnly="True" SortExpression="id_indicador" />
                         <asp:BoundField DataField="nombre_indicador" HeaderText="INDICADOR" SortExpression="nombre_indicador" />
                         <asp:BoundField DataField="descripcion" HeaderText="DESCRIPCION" SortExpression="descripcion" />
                         <asp:CheckBoxField DataField="estado" HeaderText="ESTADO" SortExpression="estado" />
-                        <asp:BoundField DataField="fecha_creacion" HeaderText="FECHA DE CREACION" SortExpression="fecha_creacion" />
+                     
                         <asp:BoundField DataField="nombre_servicio" HeaderText="SERVICIO" SortExpression="nombre_servicio" />
                     <asp:BoundField Visible="false" DataField="id_servicio" HeaderText="ID SERVICIO" SortExpression="d_servicio" />
                    

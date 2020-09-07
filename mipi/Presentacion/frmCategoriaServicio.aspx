@@ -1,4 +1,4 @@
-﻿<%@ Page Language="vb" MasterPageFile="~/Site.Master" AutoEventWireup="false" CodeBehind="frmCategoriaServicio.aspx.vb" Inherits="mipi.frmCategoriaServicio" %>
+﻿<%@ Page Title="Cat. Servicio" Language="vb" MasterPageFile="~/Site.Master" AutoEventWireup="false" CodeBehind="frmCategoriaServicio.aspx.vb" Inherits="mipi.frmCategoriaServicio" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <form runat="server">
@@ -59,7 +59,7 @@
                 <!--tabla para actualizar -->
                 <asp:GridView ID="GridView1" ShowSelectButton="True" runat="server" AutoGenerateColumns="False" DataKeyNames="id_categoria_servicio,nombre_categoria,fecha_creacion,estado" CssClass="table table-hover table-custom spacing5">
                     <Columns>
-                          <asp:CommandField ShowSelectButton="True" />
+                          <asp:CommandField ShowSelectButton="True"  SelectText="Seleccionar"/>
                         <asp:BoundField DataField="id_categoria_servicio" HeaderText="ID CATEGORIA DE SERVICIO" InsertVisible="False" ReadOnly="True" SortExpression="id_categoria_servicio" />
                         <asp:BoundField DataField="nombre_categoria" HeaderText="NOMBRE DE CATEGORIA" SortExpression="nombre_categoria" />
                         <asp:BoundField DataField="fecha_creacion" HeaderText="FECHA DE CREACION" SortExpression="fecha_creacion" />

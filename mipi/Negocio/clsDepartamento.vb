@@ -132,4 +132,24 @@ Public Class clsDepartamento
         sqlcom.Connection = New clsConexcion().getConexion
         Return sqlcom.ExecuteReader
     End Function
+
+    Public Function RecuperarDepartamentoGrafico(ByVal id_departamento As String) As SqlDataReader
+        Dim sqlcom As SqlCommand
+        sqlcom = New SqlCommand
+        sqlcom.CommandText = "select i.nombre_indicador,x.porcentaje from indicadorXdepartamento x, Indicador i
+where i.id_indicador=x.id_indicador and x.id_departamento = '" + id_departamento + "' "
+        sqlcom.Connection = New clsConexcion().getConexion
+        Return sqlcom.ExecuteReader
+        sqlcom.Connection.Close()
+    End Function
+
+    Public Function RecuperarRNP(ByVal id_departamento As String) As SqlDataReader
+        Dim sqlcom As SqlCommand
+        sqlcom = New SqlCommand
+        sqlcom.CommandText = "select * from  porcentajeEdadDepartamento  where id_departamento ='" + id_departamento + "'"
+        sqlcom.Connection = New clsConexcion().getConexion
+        Return sqlcom.ExecuteReader
+    End Function
+
+
 End Class

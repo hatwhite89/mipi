@@ -178,9 +178,32 @@ Public Class clsIndicador
     Public Function RecuperarIndicadorConServicio() As SqlDataReader
         Dim sqlcom As SqlCommand
         sqlcom = New SqlCommand
-        sqlcom.CommandText = "select i.id_indicador,i.nombre_indicador,i.descripcion,i.estado,i.fecha_creacion,s.nombre_servicio,s.id_servicio from Indicador i, Servicio s where i.id_servicio = s.id_servicio "
+        sqlcom.CommandText = "select i.id_indicador,i.nombre_indicador,i.descripcion,i.estado,s.nombre_servicio,s.id_servicio from Indicador i, Servicio s where i.id_servicio = s.id_servicio "
 
         sqlcom.Connection = New clsConexcion().getConexion
+
         Return sqlcom.ExecuteReader
+        sqlcom.Connection.Close()
     End Function
+
+    Public Function RecuperarIndicador() As SqlDataReader
+        Dim sqlcom As SqlCommand
+        sqlcom = New SqlCommand
+        sqlcom.CommandText = "select * from indicador "
+
+        sqlcom.Connection = New clsConexcion().getConexion
+
+        Return sqlcom.ExecuteReader
+        sqlcom.Connection.Close()
+    End Function
+    Public Sub EliminarIndicador()
+        Dim sqlcom As SqlCommand
+        sqlcom = New SqlCommand
+        sqlcom.CommandText = "delete from  desnutricion_6_24_meses_desnutricion"
+
+        sqlcom.Connection = New clsConexcion().getConexion
+
+        sqlcom.ExecuteReader()
+        sqlcom.Connection.Close()
+    End Sub
 End Class

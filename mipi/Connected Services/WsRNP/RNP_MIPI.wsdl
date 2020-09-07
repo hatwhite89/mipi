@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="CantidadInfantesPaisEdad">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="edad" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CantidadInfantesPaisEdadResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CantidadInfantesPaisEdadResult" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CantidadInfantesDepartamentoEdad">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IdDepartamento" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="edad" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CantidadInfantesDepartamentoEdadResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CantidadInfantesDepartamentoEdadResult" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CantidadInfantesMunicipioEdad">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IdDepartamento" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IdMunicipio" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="edad" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CantidadInfantesMunicipioEdadResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CantidadInfantesMunicipioEdadResult" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CantidadInfantesZonaEdad">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IdDepartamento" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IdMunicipio" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IdZona" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="edad" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CantidadInfantesZonaEdadResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CantidadInfantesZonaEdadResult" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="consultaNominal">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NumeroIdentidad" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="consultaNominalResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="consultaNominalResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="CantidadInfantesPaisEdadSoapIn">
+    <wsdl:part name="parameters" element="tns:CantidadInfantesPaisEdad" />
+  </wsdl:message>
+  <wsdl:message name="CantidadInfantesPaisEdadSoapOut">
+    <wsdl:part name="parameters" element="tns:CantidadInfantesPaisEdadResponse" />
+  </wsdl:message>
+  <wsdl:message name="CantidadInfantesDepartamentoEdadSoapIn">
+    <wsdl:part name="parameters" element="tns:CantidadInfantesDepartamentoEdad" />
+  </wsdl:message>
+  <wsdl:message name="CantidadInfantesDepartamentoEdadSoapOut">
+    <wsdl:part name="parameters" element="tns:CantidadInfantesDepartamentoEdadResponse" />
+  </wsdl:message>
+  <wsdl:message name="CantidadInfantesMunicipioEdadSoapIn">
+    <wsdl:part name="parameters" element="tns:CantidadInfantesMunicipioEdad" />
+  </wsdl:message>
+  <wsdl:message name="CantidadInfantesMunicipioEdadSoapOut">
+    <wsdl:part name="parameters" element="tns:CantidadInfantesMunicipioEdadResponse" />
+  </wsdl:message>
+  <wsdl:message name="CantidadInfantesZonaEdadSoapIn">
+    <wsdl:part name="parameters" element="tns:CantidadInfantesZonaEdad" />
+  </wsdl:message>
+  <wsdl:message name="CantidadInfantesZonaEdadSoapOut">
+    <wsdl:part name="parameters" element="tns:CantidadInfantesZonaEdadResponse" />
+  </wsdl:message>
+  <wsdl:message name="consultaNominalSoapIn">
+    <wsdl:part name="parameters" element="tns:consultaNominal" />
+  </wsdl:message>
+  <wsdl:message name="consultaNominalSoapOut">
+    <wsdl:part name="parameters" element="tns:consultaNominalResponse" />
+  </wsdl:message>
+  <wsdl:portType name="MIPISoap">
+    <wsdl:operation name="CantidadInfantesPaisEdad">
+      <wsdl:input message="tns:CantidadInfantesPaisEdadSoapIn" />
+      <wsdl:output message="tns:CantidadInfantesPaisEdadSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CantidadInfantesDepartamentoEdad">
+      <wsdl:input message="tns:CantidadInfantesDepartamentoEdadSoapIn" />
+      <wsdl:output message="tns:CantidadInfantesDepartamentoEdadSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CantidadInfantesMunicipioEdad">
+      <wsdl:input message="tns:CantidadInfantesMunicipioEdadSoapIn" />
+      <wsdl:output message="tns:CantidadInfantesMunicipioEdadSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CantidadInfantesZonaEdad">
+      <wsdl:input message="tns:CantidadInfantesZonaEdadSoapIn" />
+      <wsdl:output message="tns:CantidadInfantesZonaEdadSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="consultaNominal">
+      <wsdl:input message="tns:consultaNominalSoapIn" />
+      <wsdl:output message="tns:consultaNominalSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="MIPISoap" type="tns:MIPISoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CantidadInfantesPaisEdad">
+      <soap:operation soapAction="http://tempuri.org/CantidadInfantesPaisEdad" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CantidadInfantesDepartamentoEdad">
+      <soap:operation soapAction="http://tempuri.org/CantidadInfantesDepartamentoEdad" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CantidadInfantesMunicipioEdad">
+      <soap:operation soapAction="http://tempuri.org/CantidadInfantesMunicipioEdad" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CantidadInfantesZonaEdad">
+      <soap:operation soapAction="http://tempuri.org/CantidadInfantesZonaEdad" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultaNominal">
+      <soap:operation soapAction="http://tempuri.org/consultaNominal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="MIPISoap12" type="tns:MIPISoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CantidadInfantesPaisEdad">
+      <soap12:operation soapAction="http://tempuri.org/CantidadInfantesPaisEdad" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CantidadInfantesDepartamentoEdad">
+      <soap12:operation soapAction="http://tempuri.org/CantidadInfantesDepartamentoEdad" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CantidadInfantesMunicipioEdad">
+      <soap12:operation soapAction="http://tempuri.org/CantidadInfantesMunicipioEdad" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CantidadInfantesZonaEdad">
+      <soap12:operation soapAction="http://tempuri.org/CantidadInfantesZonaEdad" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultaNominal">
+      <soap12:operation soapAction="http://tempuri.org/consultaNominal" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MIPI">
+    <wsdl:port name="MIPISoap" binding="tns:MIPISoap">
+      <soap:address location="https://simrnp20200509092220.azurewebsites.net/RNP_MIPI.asmx" />
+    </wsdl:port>
+    <wsdl:port name="MIPISoap12" binding="tns:MIPISoap12">
+      <soap12:address location="https://simrnp20200509092220.azurewebsites.net/RNP_MIPI.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

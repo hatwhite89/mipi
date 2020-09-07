@@ -1,140 +1,44 @@
-﻿<%@ Page Language="vb"  MasterPageFile="~/Site.Master" AutoEventWireup="false" CodeBehind="frmConsultaDepartamental.aspx.vb" Inherits="mipi.frmConsultaDepartamental" %>
+﻿<%@ Page Title="Consulta departamental"  Language="vb"  MasterPageFile="~/Site.Master" AutoEventWireup="false" CodeBehind="frmConsultaDepartamental.aspx.vb" Inherits="mipi.frmConsultaDepartamental" %>
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <form runat="server">
 
-        <div class="block-header">
-            <div class="row clearfix">
-                <div class="col-md-12 col-sm-12">
-                    <h1>Cobertura de prestaciones de servicio de la Primera Infancia - Gestantes y Puérperas</h1>
-                </div>
-                <div class="col-md-6 col-sm-12 text-right hidden-xs">
+
+
+
+            <div class="block-header">
+                <div class="row clearfix">
+                    <div class="col-md-12 col-sm-12">
+                        <h1 class="text-center ">Cobertura de prestaciones de Educación prebásica </h1>
+                    </div>     
                 </div>
             </div>
-        </div>
-  
-
- 
-        <div class="row clearfix">
-            <div class="col-lg-12 col-md-12 col-sm-12">
-                <div class="card">
-                      
-                    <div class="header">
-                     
-    <br />
-                       
-                        <h2>Departamento   <asp:Label ID="Label1" runat="server" /> </h2>
+			<div class="row clearfix">
+                <div class="col-lg-12 col-md-12 ">
+                 </div>
+                    <div class="card">
                    
-                            </div> 
-                    <div class="body">
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <label class="input-group-text" for="inputGroupSelect01">Departamentos</label>
+                        <div class="body">
+                            <ul class="nav nav-tabs3">
+                                <li class="nav-item"><a class="nav-link"  href="frmConsultaNacional.aspx">Nacional</a></li>
+                                <li class="nav-item"><a class="nav-link   active show"  href="frmConsultaDepartamental.aspx">Departamental</a></li>
+                                <li class="nav-item"><a class="nav-link"  href="frmConsultaMunicipal2.aspx">Municipal</a></li>
+                            </ul>
+                            <div class="tab-content">
+                             
+                                <div class="tab-pane  show active" >
+                                     <div class="embed-responsive embed-responsive-16by9">
+  <iframe class="embed-responsive-item" src="https://app.powerbi.com/view?r=eyJrIjoiZmI0Y2NlNzUtMGU0YS00OTYwLWJmMmUtNDY5MTZhOWEzODI5IiwidCI6ImRhZGNlMjlhLTIyZWItNGNlNC1hOGMwLWJiYmM1ODY3NTgxMiJ9"></iframe>
+</div>                  </div>
+                         
                             </div>
-
-                            <asp:DropDownList AutoPostBack="true" CssClass="custom-select" OnSelectedIndexChanged="DropDownListDepartamentos_SelectedIndexChanged" ID="DropDownListDepartamentos" runat="server"></asp:DropDownList>
-
                         </div>
-                        <br />
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <label class="input-group-text" for="inputGroupSelect01">Servicios</label>
-                            </div>
+                    </div> 
 
-                            <asp:DropDownList AutoPostBack="false" CssClass="custom-select" ID="DropDownServicio" runat="server"></asp:DropDownList>
 
                         </div>
-                        <br />
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <label class="input-group-text" for="inputGroupSelect01">Indicadores</label>
-                            </div>
 
-                            <asp:DropDownList AutoPostBack="false" CssClass="custom-select" ID="DropDownIndicador" runat="server"></asp:DropDownList>
+   
+</form>
+       
 
-                        </div>
-								<br><br>
-								<div class="col-12">
-                                    <asp:Panel ID="Panel1" runat="server" ></asp:Panel>
-								</div>
-                        </div>
-                    </div>
-                </div>
-			</div>
-
-        <!-- GRAFICOS-->
-			<div class="row clearfix">
-                <div class="col-lg-6 col-md-12 col-sm-12">
-                    <div class="card">
-                        <div class="header">
-                            <h2>Tendencia Prestaciones Departamento <asp:Label ID="Label2" runat="server" /></h2>
-                        </div>
-                        <div class="body">
-                            <asp:Chart ID="Chart4" runat="server">
-                                <Series>
-                                    <asp:Series Name="Series1" ChartType="Line"></asp:Series>
-                                </Series>
-                                <ChartAreas>
-                                    <asp:ChartArea Name="ChartArea1"></asp:ChartArea>
-                                </ChartAreas>
-                            </asp:Chart>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-12 col-sm-12">
-                    <div class="card">
-                        <div class="header">
-                            <h2>Cobertura de Prestaciones de Acuerdo a Edad</h2>
-                        </div>
-                        <div class="body">
-                            <asp:Chart ID="Chart3" runat="server">
-                                <Series>
-                                    <asp:Series Name="Series1" ChartType="Bar"></asp:Series>
-                                </Series>
-                                <ChartAreas>
-                                    <asp:ChartArea Name="ChartArea1"></asp:ChartArea>
-                                </ChartAreas>
-                            </asp:Chart>
-                        </div>
-                    </div>
-                </div>
-            </div>
-			<div class="row clearfix">
-                <div class="col-lg-6 col-md-12">
-                    <div class="card">
-                        <div class="header">
-                            <h2>Porcentaje por Prestaciones en Departamento  <asp:Label ID="Label3" runat="server" /></h2>
-                        </div>
-                        <div class="body">
-                            <asp:Chart ID="Chart2" runat="server">
-                                <Series>
-                                    <asp:Series Name="Series1"></asp:Series>
-                                </Series>
-                                <ChartAreas>
-                                    <asp:ChartArea Name="ChartArea1"></asp:ChartArea>
-                                </ChartAreas>
-                            </asp:Chart>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-12">
-                    <div class="card">
-                        <div class="header">
-                            <h2>Porcentaje de Prestaciones por Departamento <asp:Label ID="Label4" runat="server" /></h2>
-                        </div>
-                        <div class="body">
-                            <asp:Chart ID="Chart1" runat="server">
-                                <Series>
-                                    <asp:Series Name="Series1" ChartType="Radar"></asp:Series>
-                                </Series>
-                                <ChartAreas>
-                                    <asp:ChartArea Name="ChartArea1"></asp:ChartArea>
-                                </ChartAreas>
-                            </asp:Chart>
-                        </div>
-                    </div>
-                </div>
-            </div>
-     
-            </form>
- 
 </asp:Content>

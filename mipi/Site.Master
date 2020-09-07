@@ -14,141 +14,154 @@
     <webopt:BundleReference runat="server" Path="~/Content/css" />
 
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-<style>
+    <style>
+        .responsive-iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            width: 100 %;
+            height: 100 %;
+        }
+    </style>
+    <style>
+        /* The Modal (background) */
+        .modal2 {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            padding-top: 100px; /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        }
 
+        /* Modal Content */
+        .modal-content2 {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
 
-/* The Modal (background) */
-.modal2 {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
+        /* The Close Button */
+        .close2 {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
 
-/* Modal Content */
-.modal-content2 {
-  background-color: #fefefe;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-}
-
-/* The Close Button */
-.close2 {
-  color: #aaaaaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close2:hover,
-.close2:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-</style>
+            .close2:hover,
+            .close2:focus {
+                color: #000;
+                text-decoration: none;
+                cursor: pointer;
+            }
+    </style>
     <script>
         function findGetParameter(parameterName) {
-            var result = null,
-                tmp = [];
-            location.search
-                .substr(1)
-                .split("&")
-                .forEach(function (item) {
-                    tmp = item.split("=");
-                    if (tmp[0] === parameterName) result = decodeURIComponent(tmp[1]);
-                });
-            return result;
-        }
+                 var result = null,
+                     tmp = [];
+                 location.search
+                     .substr(1)
+                     .split("&")
+                     .forEach(function (item) {
+                         tmp = item.split("=");
+                         if (tmp[0] === parameterName) result = decodeURIComponent(tmp[1]);
+                     });
+                 return result;
+             }
 
-        if (findGetParameter('r') === '1') {
-            function showModal() {
+             if (findGetParameter('r') === '1') {
+                 function showModal() {
 
-                document.getElementById('myModal').style.display = 'block';
-                  var texto = document.getElementById('textoFlag');
-                texto.innerText = "El registro fue actualizado exitosamente";
-            }
+                     document.getElementById('myModal').style.display = 'block';
+                     var texto = document.getElementById('textoFlag');
+                     texto.innerText = "El registro fue actualizado exitosamente";
+                 }
 
-            function CloseModal() {
-                document.getElementById('myModal').style.display = 'none';
-                location.reload(); 
-            }
+                 function CloseModal() {
+                     document.getElementById('myModal').style.display = 'none';
+                     location.reload();
+                 }
 
-        }
-          if (findGetParameter('r') === '0') {
-            function showModal() {
+             }
+             if (findGetParameter('r') === '0') {
+                 function showModal() {
 
-                document.getElementById('myModal').style.display = 'block';
-                var texto = document.getElementById('textoFlag');
-                texto.innerText = "El registro fue agregado exitosamente";
-            }
+                     document.getElementById('myModal').style.display = 'block';
+                     var texto = document.getElementById('textoFlag');
+                     texto.innerText = "El registro fue agregado exitosamente";
+                 }
 
-            function CloseModal() {
-                document.getElementById('myModal').style.display = 'none';
-                location.reload(); 
-            }
+                 function CloseModal() {
+                     document.getElementById('myModal').style.display = 'none';
+                     location.reload();
+                 }
 
-        }
-        if (findGetParameter('r') === '2') {
-            function showModal() {
+             }
+             if (findGetParameter('r') === '2') {
+                 function showModal() {
 
-                document.getElementById('myModal').style.display = 'block';
-                var texto = document.getElementById('textoFlag');
-                texto.innerText = "El registro fue eliminado exitosamente";
-            }
+                     document.getElementById('myModal').style.display = 'block';
+                     var texto = document.getElementById('textoFlag');
+                     texto.innerText = "El registro fue eliminado exitosamente";
+                 }
 
-            function CloseModal() {
-                document.getElementById('myModal').style.display = 'none';
-                location.reload(); 
-            }
+                 function CloseModal() {
+                     document.getElementById('myModal').style.display = 'none';
+                     location.reload();
+                 }
 
-        }
- window.history.pushState(null, null, window.location.pathname);
+             }
+             window.history.pushState(null, null, window.location.pathname);
 
     </script>
-       <script>
+    <script>
 // Get the modal
-var modal = document.getElementById("myModal");
+             var modal = document.getElementById("myModal");
 
-// Get the button that opens the modal
-var btn = document.getElementById("myBtn");
+             // Get the button that opens the modal
+             var btn = document.getElementById("myBtn");
 
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close2")[0];
+             // Get the <span> element that closes the modal
+             var span = document.getElementsByClassName("close2")[0];
 
-// When the user clicks the button, open the modal
-btn.onclick = function() {
-  modal.style.display = "block";
-}
+             // When the user clicks the button, open the modal
+             btn.onclick = function () {
+                 modal.style.display = "block";
+             }
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
+             // When the user clicks on <span> (x), close the modal
+             span.onclick = function () {
+                 modal.style.display = "none";
+             }
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-</script>
+             // When the user clicks anywhere outside of the modal, close it
+             window.onclick = function (event) {
+                 if (event.target == modal) {
+                     modal.style.display = "none";
+                 }
+             }
+    </script>
 
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- vendor -->
 
+    <link rel="stylesheet" href="/Content/html/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/Content/html/assets/vendor/bootstrap-multiselect/bootstrap-multiselect.css">
+
+    <link rel="stylesheet" href="/Content/html/assets/vendor/multi-select/css/multi-select.css">
 </head>
 
-    <body class="theme-cyan light_version  font-montserrat" onload="javascript:showModal();">
+<body class="theme-cyan light_version  font-montserrat" onload="javascript:showModal();">
 
 
 
@@ -160,12 +173,12 @@ window.onclick = function(event) {
 
     <div id="wrapper">
         <nav class="navbar top-navbar">
-            <div class="container-fluid">
+            <div class="container-fluid" style="background: #1d7ca2;">
 
                 <div class="navbar-left">
                     <div class="navbar-btn">
                         <a href="index.html">
-                            <img src="/Content/imagenes/logo_left.png"  class="img-fluid logo"></a>
+                            <img src="/Content/imagenes/logo_left.png" class="img-fluid logo"></a>
                         <button type="button" class="btn-toggle-offcanvas"><i class="lnr lnr-menu fa fa-bars"></i></button>
                     </div>
                     <ul class="nav navbar-nav">
@@ -175,8 +188,8 @@ window.onclick = function(event) {
                 <div class="navbar-right">
                     <div id="navbar-menu">
                         <ul class="nav navbar-nav">
-                            
-                            <li><a href="frmLogin.aspx" class="icon-menu"><i class="fa fa-power-off"></i></a></li>
+
+                            <li><a href="frmLogin.aspx" class="icon-menu"><i class=""></i></a></li>
                         </ul>
                     </div>
                 </div>
@@ -190,8 +203,8 @@ window.onclick = function(event) {
 
         <div id="left-sidebar" class="sidebar">
             <div class="navbar-brand">
-                
-                    <img src="/Content/imagenes/logo_left.png" alt="Oculux Logo" class="img-fluid logo"><span>MIPI</span>
+
+                <img src="/Content/imagenes/logo_left.png" alt="Oculux Logo" class="img-fluid logo"><span>MIPI</span>
                 <button type="button" class="btn-toggle-offcanvas btn btn-sm float-right"><i class="lnr lnr-menu icon-close"></i></button>
             </div>
             <div class="sidebar-scroll">
@@ -199,51 +212,130 @@ window.onclick = function(event) {
 
                     <div class="dropdown">
                         <span>Bienvenido,</span>
-                        <strong>  <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label></strong>
-                      
+                        <strong>
+                            <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label></strong>
+
                     </div>
                 </div>
                 <nav id="left-sidebar-nav" class="sidebar-nav">
                     <ul id="main-menu" class="metismenu">
-                         <li class="">
+                        <li><a href="frmLogin.aspx" class="icon-menu"><i class="fa fa-power-off"></i>Salir</a></li>
+                        <li class="">
                             <a href="default.aspx" class=""><i class="fa fa-home"></i><span>Inicio</span></a></li>
-                        <li class="header">Menú principal </li>
-                          <% If SystemAdmin("Gestantes") = "Verdadero" Then  %>
-                            <li class="">
-                        <a href="#myPage" class="has-arrow"><i class="fa fa-female"></i><span>Gestantes y Puérperas</span></a>
-                        <ul>
-                            <li class=""><a href="frmConsultaNacional.aspx">Nacional</a></li>
-                            <li><a href="frmConsultaDepartamental.aspx" id="link-departamento">Departamental</a></li>
-                            <li><a href="frmConsultaMunicipal">Municipal</a></li>
-                        </ul>
-                    </li><% End If %>
-                          <% If SystemAdmin("BoyAndGirl") = "Verdadero" Then  %>
-					<li>
-                        <a href="#myPage" class="has-arrow"><i class="fa fa-child"></i><span>Niños y Niñas</span></a>
-                        <ul>
-                            <li class=""><a href="frmConsultaNacional.aspx">Nacional</a></li>
-                            <li><a href="frmConsultaDepartamental.aspx" id="link-departamento2">Departamental</a></li>
-                            <li><a href="frmConsultaMunicipal">Municipal</a></li>
-                        </ul>
-                    </li>
+                        <li><a href="frmNosotros.aspx"><i class="fa fa-registered "></i><span>Nosotros</span></a></li>
+                          <li><a href="frmAyuda.aspx"><i class="fa fa-question"></i><span>Ayuda</span></a></li>
+                        <li class="">
+                        <li class="header">Cobertura de prestaciones de servicio</li>
+                        <li class=""><a href="frmPrestacionesNacional.aspx"><i class="fa fa-bar-chart"></i><span>Prestaciones</span></a>
+                        </li>
+                          <li class=""><a href="frmFichasIndicadores.aspx"><i class="fa fa-bar-chart"></i><span>Fichas</span></a>
+                        </li>
+                        <% If SystemAdmin("Gestantes") = "Verdadero" Then  %>
+                        <li class="">
+                            <a href="#myPage" class="has-arrow"><i class="fa fa-female"></i><span>Gestantes y Puérperas</span></a>
+                            <ul>
+                                <li class=""><a href="frmConsultaMunicipalPM.aspx">Atención Prenatal</a></li>
+                                <li><a href="frmConsultaMunicipalPM.aspx" id="link-departamento">Atención de parto</a></li>
+                                <li><a href="frmConsultaMunicipalPM.aspx">Atención de parto</a></li>
+                            </ul>
+                        </li>
                         <% End If %>
-                          <% If SystemAdmin("MotherAndC") = "Verdadero" Then  %>
-					<li>
-                        <a href="#myPage" class="has-arrow"><i class="fa fa-users"></i><span>Madres y Cuidadores</span></a>
-                        <ul>
-                           <li class=""><a href="frmConsultaNacional.aspx">Nacional</a></li>
-                            <li><a href="frmConsultaDepartamental.aspx" id="link-departamento3">Departamental</a></li>
-                            <li><a href="frmConsultaMunicipal">Municipal</a></li>
-                        </ul>
-                    </li>
+                        <% If SystemAdmin("BoyAndGirl") = "Verdadero" Then  %>
+                        <li>
+                            <a href="#myPage" class="has-arrow"><i class="fa fa-child"></i><span>Niños y niñas</span></a>
+                            <ul>
+                                <li><a href="frmConsultaMunicipalPM.aspx"><span>Vacunación infantil</span></a></li>
+                                <li><a href="frmConsultaMunicipalPM.aspx"><span>Educación Inicial</span></a></li>
+                                <li><a href="frmInscripcionNacimiento.aspx"><span>Inscripción del nacimiento</span></a></li>
+                                <li><a href="frmConsultaMunicipalPM.aspx"><span>Promoción lactancia materna exclusiva</span></a></li>
+                                <li><a href="frmConsultaMunicipalPM.aspx"><span>Vigilancia nutricional</span></a></li>
+                                <li><a href="frmConsultaMunicipalPM.aspx"><span>Recuperación nutricional</span></a></li>
+                                <li><a href="frmConsultaMunicipalPM.aspx"><span>Atención enfermedades prevalentes</span></a></li>
+                                <li><a href="frmConsultaNacional.aspx"><span>Educación prebásica</span></a></li>
+                                <li><a href="frmConsultaMunicipalPM.aspx"><span>Merienda preescolar</span></a></li>
+                                <li><a href="frmConsultaMunicipalPM.aspx"><span>Agua y saneamiento</span></a></li>
+                                <li><a href="frmConsultaMunicipalPM.aspx"><span>Espacios para arte, cultura, deporte</span></a></li>
+
+                            </ul>
+                        </li>
+                        <% End If %>
+                        <% If SystemAdmin("MothenAndC") = "Verdadero" Then  %>
+                        <li>
+                            <a href="#myPage" class="has-arrow"><i class="fa fa-users"></i><span>Cuidadores</span></a>
+                            <ul>
+                                <li class=""><a href="frmConsultaMunicipalPM.aspx">Cuidadores capacitados en DIT</a></li>
+
+                            </ul>
+                        </li>
                         <%End If %>
-                        
-                            <% If SystemAdmin("ConsultaNominal") = "Verdadero" Then  %>
-					<li><a href="frmConsultaNominal.aspx"><i class="fa fa-search"></i><span>Consulta Nominal</span></a></li>
+
+                      
+                     
+                        <li class="">
+                            <a href="#" class="has-arrow"><i class="fa fa-user"></i><span>Competencias de cuidadores</span></a>
+                            <ul>
+                                <li><a href="frmTipoUsuario.aspx">Competencias adquiridas</a></li>
+                                <li><a href="frmUsuario.aspx">Cuidadores utilizando guía Catrachitos</a></li>
+                                <li><a href="frmRol.aspx">Detección enfermedades prevalentes</a></li>
+
+                            </ul>
+
+                        </li>
+                        <li class="">
+                            <a href="#" class="has-arrow"><i class="fa fa-user"></i><span>Desarrollo del niño</span></a>
+                            <ul>
+                                <li><a href="frmTipoUsuario.aspx">Recuperación nutricional</a></li>
+                                <li><a href="frmUsuario.aspx">Recuperación del desarrollo</a></li>
+
+
+                            </ul>
+
+                        </li>
+                        <li class="header">Condiciones del hogar</li>
+                        <li class="">
+                            <a href="#" class="has-arrow"><i class="fa fa-user"></i><span>Agua y saneamiento</span></a>
+                            <ul>
+                                <li><a href="frmTipoUsuario.aspx">Acceso a agua</a></li>
+                                <li><a href="frmUsuario.aspx">Agua segura</a></li>
+                                <li><a href="frmUsuario.aspx">Disponibilidad de letrina</a></li>
+                                <li><a href="frmUsuario.aspx">Manejo de basura</a></li>
+
+
+                            </ul>
+
+                        </li>
+                        <li class="">
+                            <a href="#" class="has-arrow"><i class="fa fa-user"></i><span>Tipo de vivienda</span></a>
+                            <ul>
+                                <li><a href="frmTipoUsuario.aspx">Disponibilidad de Piso, techo y pared de material adecuado</a></li>
+                                <li><a href="frmUsuario.aspx">Cocina adecuada</a></li>
+
+
+
+                            </ul>
+
+                        </li>
+                      <% If SystemAdmin("ConsultaNominal") = "Verdadero" Then  %>
+                        <li>
+
+                            <a href="#" class="has-arrow"><i class="fa fa-search"></i><span>Consulta Nominal</span></a>
+                            <ul>
+                                <li class=""><a href="frmConsultaNominal.aspx">Busqueda Nominal</a></li>
+                                <li><a href="frmCoberturaNominal.aspx">Cobertura nominal </a></li>
+
+                            </ul>
+
+                        </li>
+                         
                         <%End If %>
-                            <% If SystemAdmin("allSystem") = "Verdadero" Then  %>
-                         <li class="header">Configuración</li>
-                          <li class="">
+                        <% If SystemAdmin("allSystem") = "Verdadero" Then  %>
+
+
+
+
+
+                        <li class="header">Configuración</li>
+                        <li class="">
                             <a href="frmTema.aspx" class=""><i class="fa fa-desktop "></i><span>Tema</span></a></li>
                         <!--usuarios-->
                         <li class="">
@@ -252,67 +344,73 @@ window.onclick = function(event) {
                                 <li><a href="frmTipoUsuario.aspx">Tipo Usuario</a></li>
                                 <li><a href="frmUsuario.aspx">Usuario</a></li>
                                 <li><a href="frmRol.aspx">Rol Usuario</a></li>
-                                 <li><a href="frmAccesoRol.aspx">Accesos Rol</a></li>
+                                <li><a href="frmAccesoRol.aspx">Accesos Rol</a></li>
                             </ul>
 
                         </li>
 
-                         <!--Servicios-->
-                         <li class="">
-                            <a href="#" class="has-arrow"><i class="fa fa-flag  "></i><span>Servicios</span></a>
+                        <!--Servicios-->
+                        <li class="">
+                            <a href="#" class="has-arrow"><i class="fa fa-flag  "></i><span>Prestación</span></a>
                             <ul>
-                                <li><a href="frmCategoriaServicio.aspx">Categoría Servicio</a></li>
-                                <li><a href="frmServicios.aspx">Servicio</a></li>
+                                <li><a href="frmCategoriaServicio.aspx">Categoría Prestación</a></li>
+                                <li><a href="frmServicios.aspx">Prestación</a></li>
 
 
                             </ul>
 
                         </li>
                         <!--indicador-->
-                           <li class="">
+                        <li class="">
                             <a href="#" class="has-arrow"><i class=" fa fa-bar-chart "></i><span>Indicadores</span></a>
                             <ul>
                                 <li><a href="frmIndicador.aspx">Indicador</a></li>
-                                <li><a href="frmServicios.aspx">Formula</a></li>
+                                <li><a href="frmSubirFichasIndicador.aspx">Subir Fichas</a></li>
 
+                                <li><a href="frmSubirExcelDesnutricion.aspx">Subir datos destrucion</a></li>
 
                             </ul>
 
                         </li>
-                          <li class="">
+                        <li class="">
                             <a href="frmDepartamento.aspx" class=""><i class="fa fa-globe"></i><span>Departamento</span></a></li>
-                          <li class="">
+                        <li class="">
                             <a href="frmMunicipio.aspx" class=""><i class="  fa fa-thumb-tack "></i><span>Municipio</span></a></li>
-                 
-                        
+
+
                         <!-- inicio seguridad -->
                         <li class="header">Seguridad</li>
                         <!--accesos-->
                         <li class="">
                             <a href="frmTipoUsuarioAccesos.aspx" class=""><i class="fa fa-key"></i><span>Accesos</span></a></li>
                         <li class="">
-                            <a href="#" class=""><i class=" fa fa-eye "></i><span>Bitácora</span></a></li>
+                            <a href="frmBitacoras.aspx" class=""><i class=" fa fa-eye "></i><span>Bitácora</span></a></li>
                         <!-- fin seguridad -->
 
                         <% End If %>
-
                     </ul>
                 </nav>
             </div>
         </div>
-        <div id="main-content">
-            <div class="container-fluid">
+
+        <div id="main-content" style="background: #f0f4f7;">
+            <div class="">
 
 
                 <!-- AQUI INICIA EL BLOQUE DE MASTER PAGE-->
                 <asp:ContentPlaceHolder ID="MainContent" runat="server">
                 </asp:ContentPlaceHolder>
                 <!--AQUI FINALIZA EL BLOQUE DE MASTER PAGE-->
+
+
+            </div>
+            <div class="footer">
+                <p style="text-align: center; font-size: small; font-weight: bold;">© TODOS LOS DERECHOS RESERVADOS 2020 | Plataforma de monitoreo de indicadores de primera infancia MIPI</p>
             </div>
         </div>
 
 
-         <!-- modal-->
+        <!-- modal-->
     </div>
 
     <script src="/Content/html/assets/bundles/libscripts.bundle.js"></script>
@@ -326,21 +424,28 @@ window.onclick = function(event) {
     <script src="/Content/html/assets/bundles/jvectormap.bundle.js"></script>
     <!-- JVectorMap Plugin Js -->
 
- 
+
     <script src="/Content/html/assets/js/index4.js"></script>
-    <script src="/Content/assets//vendor/jquery-knob/jquery.knob.min.js"></script><!-- Jquery Knob Plugin Js -->
-<script src="/Content/html/assets/bundles/mainscripts.bundle.js"></script>
-<script src="/Content/html/assets/js/pages/charts/jquery-knob.js"></script>
+    <script src="/Content/assets//vendor/jquery-knob/jquery.knob.min.js"></script>
+    <!-- Jquery Knob Plugin Js -->
+    <script src="/Content/html/assets/bundles/mainscripts.bundle.js"></script>
+    <script src="/Content/html/assets/js/pages/charts/jquery-knob.js"></script>
+    <script src="/Content/html/assets/js/pages/forms/form-wizard.js"></script>
 
-         <div id="myModal" class="modal2">
+    <script src="/Content/html/assets/vendor/multi-select/js/jquery.multi-select.js"></script>
+    <!-- Multi Select Plugin Js -->
+    <script src="/Content/html/assets/vendor/bootstrap-multiselect/bootstrap-multiselect.js"></script>
 
-  <!-- Modal content -->
-  <div class="modal-content2">
-    <span class="close2" onclick="CloseModal()">&times;</span>
-    <p class="text-center" id="textoFlag">Se ha registrado exitosamente</p>
-  </div>
+    <link rel="stylesheet" href="/Content/html/assets/vendor/jquery-steps/jquery.steps.css">
+    <div id="myModal" class="modal2">
 
-</div>
+        <!-- Modal content -->
+        <div class="modal-content2">
+            <span class="close2" onclick="CloseModal()">&times;</span>
+            <p class="text-center" id="textoFlag">Se ha registrado exitosamente</p>
+        </div>
+
+    </div>
 
 
 </body>

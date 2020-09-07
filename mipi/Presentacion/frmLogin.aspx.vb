@@ -7,6 +7,7 @@
         Session.Remove("usuario")
         Session.Remove("cod_user")
 
+
     End Sub
 
     Protected Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click

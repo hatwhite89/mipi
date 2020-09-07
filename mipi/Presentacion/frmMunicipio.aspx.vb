@@ -2,14 +2,8 @@
     Inherits System.Web.UI.Page
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-        'llenar griwdview
-        Dim clsM As New clsMunicipio
-        Dim TableMunicipio As New DataTable
-        TableMunicipio.Load(clsM.RecuperarMunicipios())
 
-        GridView1.DataSource = TableMunicipio
-        GridView1.DataBind()
-
+        llenarMunicipio()
 
         'llenar combobox
         Dim clsD As New clsDepartamento
@@ -26,7 +20,15 @@
 
         End If
     End Sub
+    Public Sub llenarMunicipio()
+        'llenar griwdview
+        Dim clsM As New clsMunicipio
+        Dim TableMunicipio As New DataTable
+        TableMunicipio.Load(clsM.RecuperarMunicipios())
 
+        GridView1.DataSource = TableMunicipio
+        GridView1.DataBind()
+    End Sub
     Protected Sub b1_Click(sender As Object, e As EventArgs) Handles b1.Click
         'actualizar municipio
         Dim clsM As New clsMunicipio
@@ -88,5 +90,10 @@
         txtIdExterno.Text = ""
         txtNombreMunicpio.Text = ""
         DropDownList1.ClearSelection()
+    End Sub
+
+    Protected Sub GridView1_PageIndexChanging(sender As Object, e As GridViewPageEventArgs) Handles GridView1.PageIndexChanging
+        GridView1.PageIndex = e.NewPageIndex
+        llenarMunicipio()
     End Sub
 End Class

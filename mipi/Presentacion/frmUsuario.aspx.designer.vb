@@ -12,7 +12,7 @@ Option Explicit On
 
 
 Partial Public Class frmUsuario
-    
+
     '''<summary>
     '''Control txtCodigo.
     '''</summary>
@@ -21,7 +21,7 @@ Partial Public Class frmUsuario
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents txtCodigo As Global.System.Web.UI.WebControls.TextBox
-    
+
     '''<summary>
     '''Control txtNombreUsuario.
     '''</summary>
@@ -30,7 +30,7 @@ Partial Public Class frmUsuario
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents txtNombreUsuario As Global.System.Web.UI.WebControls.TextBox
-    
+
     '''<summary>
     '''Control txtPassword.
     '''</summary>
@@ -39,7 +39,7 @@ Partial Public Class frmUsuario
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents txtPassword As Global.System.Web.UI.WebControls.TextBox
-    
+
     '''<summary>
     '''Control rblEstado.
     '''</summary>
@@ -48,7 +48,7 @@ Partial Public Class frmUsuario
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents rblEstado As Global.System.Web.UI.WebControls.RadioButtonList
-    
+
     '''<summary>
     '''Control DropDownList1.
     '''</summary>
@@ -57,7 +57,7 @@ Partial Public Class frmUsuario
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents DropDownList1 As Global.System.Web.UI.WebControls.DropDownList
-    
+
     '''<summary>
     '''Control DropDownList2.
     '''</summary>
@@ -66,7 +66,7 @@ Partial Public Class frmUsuario
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents DropDownList2 As Global.System.Web.UI.WebControls.DropDownList
-    
+
     '''<summary>
     '''Control btnGuardar.
     '''</summary>
@@ -75,7 +75,7 @@ Partial Public Class frmUsuario
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents btnGuardar As Global.System.Web.UI.WebControls.Button
-    
+
     '''<summary>
     '''Control btnNuevo.
     '''</summary>
@@ -84,7 +84,7 @@ Partial Public Class frmUsuario
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents btnNuevo As Global.System.Web.UI.WebControls.Button
-    
+
     '''<summary>
     '''Control btnEliminar.
     '''</summary>
@@ -93,7 +93,7 @@ Partial Public Class frmUsuario
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents btnEliminar As Global.System.Web.UI.WebControls.Button
-    
+
     '''<summary>
     '''Control GridView1.
     '''</summary>

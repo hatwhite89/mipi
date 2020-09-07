@@ -1,4 +1,4 @@
-﻿<%@ Page Language="vb" MasterPageFile="~/Site.Master" AutoEventWireup="false" CodeBehind="frmTema.aspx.vb" Inherits="mipi.frmTema" %>
+﻿<%@ Page Title="Tema" Language="vb" MasterPageFile="~/Site.Master" AutoEventWireup="false" CodeBehind="frmTema.aspx.vb" Inherits="mipi.frmTema" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <form runat="server">

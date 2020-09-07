@@ -10,6 +10,15 @@ Public Class SiteMaster
         End If
         Label1.Text = Session("usuario").ToString
 
+        Dim clsB As New clsBitacora
+
+        With clsB
+            .Usuario1 = Session("usuario").ToString
+            .Accion1 = "visita"
+            .Pagina1 = Request.Url.ToString
+        End With
+        clsB.AgregarBitacora()
+
     End Sub
     Public Function SystemAdmin(ByVal variable As String) As String
 

@@ -156,4 +156,25 @@ Public Class clsMunicipio
         sqlcom.Connection = New clsConexcion().getConexion
         Return sqlcom.ExecuteReader
     End Function
+
+    Public Function RecuperarMunicipios2(ByVal id_departamento As String, ByVal id_indicador As String) As SqlDataReader
+        Dim sqlcom As SqlCommand
+        sqlcom = New SqlCommand
+        sqlcom.CommandText = "select m.nombre_municipio,x.porcentaje from indicadorXmunicipio x, Departamento d,municipio m
+where x.id_municipio = m.id_municipio and m.id_departamento =d.id_departamento  and d.id_departamento ='" + id_departamento + "' and x.id_indicador ='" + id_indicador + "'
+"
+        sqlcom.Connection = New clsConexcion().getConexion
+        Return sqlcom.ExecuteReader
+    End Function
+
+    Public Function RecuperarIndicadoresMunicipio(ByVal id_departamento As String) As SqlDataReader
+        Dim sqlcom As SqlCommand
+        sqlcom = New SqlCommand
+        sqlcom.CommandText = "select i.nombre_indicador,x.porcentable from municipioXindicador x, municipio m,Indicador i
+where x.id_municipio = m.id_municipio and i.id_indicador=x.id_indicador and x.id_municipio ='" + id_departamento + "'
+"
+        sqlcom.Connection = New clsConexcion().getConexion
+        Return sqlcom.ExecuteReader
+    End Function
+
 End Class

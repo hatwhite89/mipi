@@ -29,7 +29,7 @@ Public Class frmFichasIndicadores
             sb.Append(" <tr>")
             sb.Append("<td>" + file.Name + "</td>")
 
-            sb.Append("<td><a href=" + Chr(34) + "/Fichas/" + file.Name + Chr(34) + ">" + " Ver ficha" + "</a></td>")
+            sb.Append("<td><a href=" + Chr(34) + "/Fichas/" + file.Name + Chr(34) + " target=" + Chr(34) + "_blank" + Chr(34) + ">" + " Ver ficha" + "</a></td>")
             sb.Append("</tr>")
         Next
         sb.Append( " </tbody>

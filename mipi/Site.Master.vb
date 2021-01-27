@@ -5,7 +5,8 @@ Public Class SiteMaster
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As EventArgs) Handles Me.Load
         If Session("usuario") = "" Then
-            Response.Redirect("frmLogin.aspx")
+
+            Response.Redirect("https://mipi20200330112503.azurewebsites.net/Presentacion/frmLogin.aspx")
             Exit Sub
         End If
         Label1.Text = Session("usuario").ToString

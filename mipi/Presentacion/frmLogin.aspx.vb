@@ -20,7 +20,7 @@
         If clsU.Login() = "1" Then
             Session.Add("usuario", txtNombreUsuario.Text)
             Session.Add("cod_user", clsU.RecuperarCodUser(txtNombreUsuario.Text).ToString)
-            Response.Redirect("Default.aspx")
+            Response.Redirect("Inicio.aspx")
 
         Else
             Response.Redirect("frmLogin.aspx?r=1")

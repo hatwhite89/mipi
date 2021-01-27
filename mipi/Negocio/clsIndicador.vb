@@ -199,7 +199,7 @@ Public Class clsIndicador
     Public Sub EliminarIndicador()
         Dim sqlcom As SqlCommand
         sqlcom = New SqlCommand
-        sqlcom.CommandText = "delete from  desnutricion_6_24_meses_desnutricion"
+        sqlcom.CommandText = "exec eliminarBDCuidadores"
 
         sqlcom.Connection = New clsConexcion().getConexion
 

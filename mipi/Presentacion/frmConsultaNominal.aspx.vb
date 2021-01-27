@@ -22,7 +22,7 @@ and c.identidad ='" + TextBox7.Text + "' "
         sqlcom = New SqlCommand
         sqlcom.CommandText = "  select *
   from cobertura_infantes 
-  where identidad ='2' "
+  where identidad ='" + TextBox7.Text + "' "
         sqlcom.Connection = New clsConexcion().getConexion
         Return sqlcom.ExecuteScalar
         sqlcom.Connection.Close()

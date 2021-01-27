@@ -55,11 +55,7 @@
                 <div class="header">
                     <h6 class="text-center ">LISTADO DE PRIVILEGIOS</h6>
 
-                    <div class="btn-group-sm">
-
-                        <button type="button" class="btn btn-round btn-success  pull-right" data-toggle="modal" data-target=".Form-Wizard-modal">Instrucciones</button>
-                        <br />
-                    </div>
+               
                 </div>
             <div class="body table-responsive">
                 <!--tabla para actualizar -->

@@ -21,10 +21,10 @@
 
                    
                         <div class="body">
-                <ul class="nav nav-tabs3">
-                                <li class="nav-item"><a class="nav-link active show"  href="frmPrestacionesNacional.aspx">Nacional</a></li>
-                                <li class="nav-item"><a class="nav-link   "  href="frmPrestacionesDepartamental.aspx">Departamental</a></li>
-                                <li class="nav-item"><a class="nav-link "  href="#">Municipal</a></li>
+                     <ul class="nav nav-tabs3">
+                                <li class="nav-item"><a class="nav-link  active show "  href="frmPrestacionesNacional.aspx">Nacional</a></li>
+                                <li class="nav-item"><a class="nav-link  "  href="frmPrestacionesDepartamental.aspx">Departamental</a></li>
+                                <li class="nav-item"><a class="nav-link "   href="frmPrestacionesMunicipal.aspx">Municipal</a></li>
                             </ul>
                             <div class="tab-content">
                              
@@ -32,10 +32,10 @@
                              
                        
                                      <div class="embed-responsive embed-responsive-16by9">
-  <iframe class="embed-responsive-item" src="https://app.powerbi.com/view?r=eyJrIjoiOWE4OTcyMDMtZGY5NS00M2IwLTgyNjItYTk2NGVjMjBlNDExIiwidCI6ImRhZGNlMjlhLTIyZWItNGNlNC1hOGMwLWJiYmM1ODY3NTgxMiJ9&pageName=ReportSection"></iframe>
+  <iframe  width="100%" height="100%"  src="https://app.powerbi.com/view?r=eyJrIjoiNDRkOWQwMWItZjBiNS00MDFiLTk4MDUtZDlhMmE5ODUwNTBmIiwidCI6ImRhZGNlMjlhLTIyZWItNGNlNC1hOGMwLWJiYmM1ODY3NTgxMiJ9"   frameborder="0" allowFullScreen="true"></iframe>
 </div>                  </div>       
                          
-                            </div>
+                          
                           
                         </div>
                     </div> 

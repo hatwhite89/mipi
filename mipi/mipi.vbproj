@@ -31,9 +31,10 @@
     <DebugType>full</DebugType>
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
-    <OutputPath>bin\</OutputPath>
+    <OutputPath>bin\Debug\</OutputPath>
     <DocumentationFile>WebForms_Basic.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -41,9 +42,10 @@
     <DefineDebug>false</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
-    <OutputPath>bin\</OutputPath>
+    <OutputPath>bin\Debug\</OutputPath>
     <DocumentationFile>WebForms_Basic.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="ClosedXML, Version=0.95.3.0, Culture=neutral, processorArchitecture=MSIL">
@@ -65,6 +67,7 @@
     <Reference Include="ExcelNumberFormat, Version=1.0.10.0, Culture=neutral, PublicKeyToken=23c6f5d73be07eca, processorArchitecture=MSIL">
       <HintPath>..\packages\ExcelNumberFormat.1.0.10\lib\net20\ExcelNumberFormat.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Build.Engine" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1404.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
@@ -87,6 +90,7 @@
     <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.SqlServer.Data.Tools.ExceptionMessageBox, Version=16.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
     </Reference>
@@ -3823,8 +3827,17 @@
     <Content Include="Content\imagenes\logo_left.png" />
     <Content Include="Content\imagenes\logo_mipi.png" />
     <Content Include="Content\imagenes\mipi.png" />
+    <Content Include="Content\MIPI_2.png" />
     <Content Include="Content\sedis.jpg" />
     <Content Include="Content\Sin título-1.png" />
+    <Content Include="Presentacion\frmInscripcionNacimientoNacional.aspx" />
+    <Content Include="Presentacion\frmInscripcionNacimientosMunicipal.aspx" />
+    <Content Include="Presentacion\frmPrestacionesMunicipal.aspx" />
+    <Content Include="Presentacion\Inicio.aspx" />
+    <Content Include="Presentacion\frmCuidadoresCatrachito.aspx" />
+    <Content Include="Presentacion\frmCuidadoresDIT.aspx" />
+    <Content Include="Presentacion\frmCuidadoresDITMunicipal.aspx" />
+    <Content Include="Presentacion\frmSubirCuidadores.aspx" />
     <Content Include="Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Model1.Context.vb</LastGenOutput>
@@ -3835,7 +3848,7 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.vb</LastGenOutput>
     </Content>
-    <Content Include="Presentacion\Default.aspx" />
+    <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Presentacion\frmAcceso.aspx" />
@@ -4023,10 +4036,10 @@
     <Content Include="Presentacion\frmPrestacionesDepartamental.aspx" />
     <Content Include="Presentacion\frmPrestacionesNacional.aspx" />
     <Content Include="Presentacion\frmPrivilegio.aspx" />
-    <Content Include="Presentacion\frmReporteDepartamental.aspx" />
     <Content Include="Presentacion\frmRol.aspx" />
     <Content Include="Presentacion\frmServicios.aspx" />
     <Content Include="Presentacion\frmSubirExcelDesnutricion.aspx" />
+    <Content Include="Presentacion\frmSubirExcelNominalCuidadores.aspx" />
     <Content Include="Presentacion\frmSubirFichasIndicador.aspx" />
     <Content Include="Presentacion\frmTema.aspx" />
     <Content Include="Presentacion\frmTipoUsuario.aspx" />
@@ -4112,11 +4125,61 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="CrystalReport1.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CrystalReport1.rpt</DependentUpon>
-      <SubType>Component</SubType>
+    <Compile Include="Presentacion\frmInscripcionNacimientoNacional.aspx.designer.vb">
+      <DependentUpon>frmInscripcionNacimientoNacional.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmInscripcionNacimientoNacional.aspx.vb">
+      <DependentUpon>frmInscripcionNacimientoNacional.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmInscripcionNacimientosMunicipal.aspx.designer.vb">
+      <DependentUpon>frmInscripcionNacimientosMunicipal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmInscripcionNacimientosMunicipal.aspx.vb">
+      <DependentUpon>frmInscripcionNacimientosMunicipal.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmPrestacionesMunicipal.aspx.designer.vb">
+      <DependentUpon>frmPrestacionesMunicipal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmPrestacionesMunicipal.aspx.vb">
+      <DependentUpon>frmPrestacionesMunicipal.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Inicio.aspx.designer.vb">
+      <DependentUpon>Inicio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Inicio.aspx.vb">
+      <DependentUpon>Inicio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmCuidadoresCatrachito.aspx.designer.vb">
+      <DependentUpon>frmCuidadoresCatrachito.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmCuidadoresCatrachito.aspx.vb">
+      <DependentUpon>frmCuidadoresCatrachito.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmCuidadoresDIT.aspx.designer.vb">
+      <DependentUpon>frmCuidadoresDIT.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmCuidadoresDIT.aspx.vb">
+      <DependentUpon>frmCuidadoresDIT.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmCuidadoresDITMunicipal.aspx.designer.vb">
+      <DependentUpon>frmCuidadoresDITMunicipal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmCuidadoresDITMunicipal.aspx.vb">
+      <DependentUpon>frmCuidadoresDITMunicipal.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmSubirCuidadores.aspx.designer.vb">
+      <DependentUpon>frmSubirCuidadores.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmSubirCuidadores.aspx.vb">
+      <DependentUpon>frmSubirCuidadores.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="mipiDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -4146,11 +4209,11 @@
     <Compile Include="Negocio\clsRol.vb" />
     <Compile Include="Negocio\clsSEDUC.vb" />
     <Compile Include="Negocio\clsTema.vb" />
-    <Compile Include="Presentacion\Default.aspx.vb">
+    <Compile Include="Default.aspx.vb">
       <SubType>ASPXCodeBehind</SubType>
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\Default.aspx.designer.vb">
+    <Compile Include="Default.aspx.designer.vb">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="Negocio\clsPathForm.vb" />
@@ -4372,13 +4435,6 @@
       <DependentUpon>frmPrivilegio.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="Presentacion\frmReporteDepartamental.aspx.designer.vb">
-      <DependentUpon>frmReporteDepartamental.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Presentacion\frmReporteDepartamental.aspx.vb">
-      <DependentUpon>frmReporteDepartamental.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
-    </Compile>
     <Compile Include="Presentacion\frmRol.aspx.designer.vb">
       <DependentUpon>frmRol.aspx</DependentUpon>
     </Compile>
@@ -4398,6 +4454,13 @@
     </Compile>
     <Compile Include="Presentacion\frmSubirExcelDesnutricion.aspx.vb">
       <DependentUpon>frmSubirExcelDesnutricion.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmSubirExcelNominalCuidadores.aspx.designer.vb">
+      <DependentUpon>frmSubirExcelNominalCuidadores.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmSubirExcelNominalCuidadores.aspx.vb">
+      <DependentUpon>frmSubirExcelNominalCuidadores.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Presentacion\frmSubirFichasIndicador.aspx.designer.vb">
@@ -4462,10 +4525,6 @@
     <Compile Include="WebServices\clsEducacionInicial.vb" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="CrystalReport1.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>CrystalReport1.vb</LastGenOutput>
-    </EmbeddedResource>
     <EmbeddedResource Include="My Project\licenses.licx" />
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -4492,7 +4551,6 @@
     <Content Include="mipiDataSet.xsc">
       <DependentUpon>mipiDataSet.xsd</DependentUpon>
     </Content>
-    <Content Include="Fichas\Niños con desnutricion de Intibucá..xlsx" />
     <None Include="mipiDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>mipiDataSet.Designer.vb</LastGenOutput>
@@ -4525,6 +4583,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Fichas\" />
     <Folder Include="Presentacion\Image\" />
     <Folder Include="System\Web\UI\" />
     <Folder Include="Uploads\" />
@@ -4560,6 +4619,36 @@
   </PropertyGroup>
   <PropertyGroup>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>WebForms_Basic.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>WebForms_Basic.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\</OutputPath>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />

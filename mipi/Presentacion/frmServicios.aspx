@@ -88,11 +88,7 @@
                  <div class="header">
                     <h6 class="text-center ">LISTADO DE USUARIOS </h6>
 
-                    <div class="btn-group-sm">
-
-                        <button type="button" class="btn btn-round btn-success  pull-right" data-toggle="modal" data-target=".Form-Wizard-modal">Instrucciones</button>
-                        <br />
-                    </div>
+                  
                 </div>
                 <!--tabla para actualizar -->
                 <asp:GridView ID="GridView1" autopostback="true" ShowSelectButton="True" runat="server" AutoGenerateColumns="False" DataKeyNames="id_servicio,nombre_servicio,descripcion_servicio,fecha_creacion,estado" CssClass="table-responsive" CellPadding="8" ForeColor="#333333" GridLines="None" >

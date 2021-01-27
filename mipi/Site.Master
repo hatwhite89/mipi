@@ -67,89 +67,89 @@
     </style>
     <script>
         function findGetParameter(parameterName) {
-                 var result = null,
-                     tmp = [];
-                 location.search
-                     .substr(1)
-                     .split("&")
-                     .forEach(function (item) {
-                         tmp = item.split("=");
-                         if (tmp[0] === parameterName) result = decodeURIComponent(tmp[1]);
-                     });
-                 return result;
-             }
+            var result = null,
+                tmp = [];
+            location.search
+                .substr(1)
+                .split("&")
+                .forEach(function (item) {
+                    tmp = item.split("=");
+                    if (tmp[0] === parameterName) result = decodeURIComponent(tmp[1]);
+                });
+            return result;
+        }
 
-             if (findGetParameter('r') === '1') {
-                 function showModal() {
+        if (findGetParameter('r') === '1') {
+            function showModal() {
 
-                     document.getElementById('myModal').style.display = 'block';
-                     var texto = document.getElementById('textoFlag');
-                     texto.innerText = "El registro fue actualizado exitosamente";
-                 }
+                document.getElementById('myModal').style.display = 'block';
+                var texto = document.getElementById('textoFlag');
+                texto.innerText = "El registro fue actualizado exitosamente";
+            }
 
-                 function CloseModal() {
-                     document.getElementById('myModal').style.display = 'none';
-                     location.reload();
-                 }
+            function CloseModal() {
+                document.getElementById('myModal').style.display = 'none';
+                location.reload();
+            }
 
-             }
-             if (findGetParameter('r') === '0') {
-                 function showModal() {
+        }
+        if (findGetParameter('r') === '0') {
+            function showModal() {
 
-                     document.getElementById('myModal').style.display = 'block';
-                     var texto = document.getElementById('textoFlag');
-                     texto.innerText = "El registro fue agregado exitosamente";
-                 }
+                document.getElementById('myModal').style.display = 'block';
+                var texto = document.getElementById('textoFlag');
+                texto.innerText = "El registro fue agregado exitosamente";
+            }
 
-                 function CloseModal() {
-                     document.getElementById('myModal').style.display = 'none';
-                     location.reload();
-                 }
+            function CloseModal() {
+                document.getElementById('myModal').style.display = 'none';
+                location.reload();
+            }
 
-             }
-             if (findGetParameter('r') === '2') {
-                 function showModal() {
+        }
+        if (findGetParameter('r') === '2') {
+            function showModal() {
 
-                     document.getElementById('myModal').style.display = 'block';
-                     var texto = document.getElementById('textoFlag');
-                     texto.innerText = "El registro fue eliminado exitosamente";
-                 }
+                document.getElementById('myModal').style.display = 'block';
+                var texto = document.getElementById('textoFlag');
+                texto.innerText = "El registro fue eliminado exitosamente";
+            }
 
-                 function CloseModal() {
-                     document.getElementById('myModal').style.display = 'none';
-                     location.reload();
-                 }
+            function CloseModal() {
+                document.getElementById('myModal').style.display = 'none';
+                location.reload();
+            }
 
-             }
-             window.history.pushState(null, null, window.location.pathname);
+        }
+        window.history.pushState(null, null, window.location.pathname);
 
     </script>
     <script>
-// Get the modal
-             var modal = document.getElementById("myModal");
+        // Get the modal
+        var modal = document.getElementById("myModal");
 
-             // Get the button that opens the modal
-             var btn = document.getElementById("myBtn");
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
 
-             // Get the <span> element that closes the modal
-             var span = document.getElementsByClassName("close2")[0];
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close2")[0];
 
-             // When the user clicks the button, open the modal
-             btn.onclick = function () {
-                 modal.style.display = "block";
-             }
+        // When the user clicks the button, open the modal
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
 
-             // When the user clicks on <span> (x), close the modal
-             span.onclick = function () {
-                 modal.style.display = "none";
-             }
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
 
-             // When the user clicks anywhere outside of the modal, close it
-             window.onclick = function (event) {
-                 if (event.target == modal) {
-                     modal.style.display = "none";
-                 }
-             }
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
     </script>
 
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -178,7 +178,7 @@
                 <div class="navbar-left">
                     <div class="navbar-btn">
                         <a href="index.html">
-                            <img src="/Content/imagenes/logo_left.png" class="img-fluid logo"></a>
+                            <img src="/Content/MIPI_2.png" class="img-fluid logo"></a>
                         <button type="button" class="btn-toggle-offcanvas"><i class="lnr lnr-menu fa fa-bars"></i></button>
                     </div>
                     <ul class="nav navbar-nav">
@@ -204,7 +204,7 @@
         <div id="left-sidebar" class="sidebar">
             <div class="navbar-brand">
 
-                <img src="/Content/imagenes/logo_left.png" alt="Oculux Logo" class="img-fluid logo"><span>MIPI</span>
+                <img src="/Content/MIPI_2.png" alt="Oculux Logo" class="img-fluid logo"><span>MIPI</span>
                 <button type="button" class="btn-toggle-offcanvas btn btn-sm float-right"><i class="lnr lnr-menu icon-close"></i></button>
             </div>
             <div class="sidebar-scroll">
@@ -219,17 +219,19 @@
                 </div>
                 <nav id="left-sidebar-nav" class="sidebar-nav">
                     <ul id="main-menu" class="metismenu">
-                        <li><a href="frmLogin.aspx" class="icon-menu"><i class="fa fa-power-off"></i>Salir</a></li>
+                        <li class="header" style="font-weight: bold; color: black; text-align: center;">Menu Principal</li>
+
                         <li class="">
                             <a href="default.aspx" class=""><i class="fa fa-home"></i><span>Inicio</span></a></li>
-                        <li><a href="frmNosotros.aspx"><i class="fa fa-registered "></i><span>Nosotros</span></a></li>
-                          <li><a href="frmAyuda.aspx"><i class="fa fa-question"></i><span>Ayuda</span></a></li>
+
+                        <li><a href="frmAyuda.aspx"><i class="fa fa-question"></i><span>Ayuda</span></a></li>
+                        <li><a href="frmLogin.aspx" class="icon-menu"><i class="fa fa-power-off"></i>Salir</a></li>
+
                         <li class="">
-                        <li class="header">Cobertura de prestaciones de servicio</li>
-                        <li class=""><a href="frmPrestacionesNacional.aspx"><i class="fa fa-bar-chart"></i><span>Prestaciones</span></a>
+                        <li class="header" style="font-weight: bold; color: black; text-align: center;">Cobertura de prestaciones de servicio</li>
+                        <li class=""><a href="frmPrestacionesNacional.aspx"><i class="fa fa-bar-chart"></i><span>Todas las Prestaciones</span></a>
                         </li>
-                          <li class=""><a href="frmFichasIndicadores.aspx"><i class="fa fa-bar-chart"></i><span>Fichas</span></a>
-                        </li>
+
                         <% If SystemAdmin("Gestantes") = "Verdadero" Then  %>
                         <li class="">
                             <a href="#myPage" class="has-arrow"><i class="fa fa-female"></i><span>Gestantes y Puérperas</span></a>
@@ -246,7 +248,7 @@
                             <ul>
                                 <li><a href="frmConsultaMunicipalPM.aspx"><span>Vacunación infantil</span></a></li>
                                 <li><a href="frmConsultaMunicipalPM.aspx"><span>Educación Inicial</span></a></li>
-                                <li><a href="frmInscripcionNacimiento.aspx"><span>Inscripción del nacimiento</span></a></li>
+                                <li><a href="frmInscripcionNacimientoNacional.aspx"><span>Inscripción del nacimiento</span></a></li>
                                 <li><a href="frmConsultaMunicipalPM.aspx"><span>Promoción lactancia materna exclusiva</span></a></li>
                                 <li><a href="frmConsultaMunicipalPM.aspx"><span>Vigilancia nutricional</span></a></li>
                                 <li><a href="frmConsultaMunicipalPM.aspx"><span>Recuperación nutricional</span></a></li>
@@ -269,72 +271,63 @@
                         </li>
                         <%End If %>
 
-                      
-                     
+
+                        <li class="header" style="font-weight: bold; color: black; text-align: center;">Competencias de cuidadores</li>
                         <li class="">
-                            <a href="#" class="has-arrow"><i class="fa fa-user"></i><span>Competencias de cuidadores</span></a>
-                            <ul>
-                                <li><a href="frmTipoUsuario.aspx">Competencias adquiridas</a></li>
-                                <li><a href="frmUsuario.aspx">Cuidadores utilizando guía Catrachitos</a></li>
-                                <li><a href="frmRol.aspx">Detección enfermedades prevalentes</a></li>
-
-                            </ul>
-
-                        </li>
+                            <a href="frmConsultaMunicipalPM.aspx" class=""><i class="fa fa-certificate"></i><span>Competencias adquiridas</span></a></li>
                         <li class="">
-                            <a href="#" class="has-arrow"><i class="fa fa-user"></i><span>Desarrollo del niño</span></a>
-                            <ul>
-                                <li><a href="frmTipoUsuario.aspx">Recuperación nutricional</a></li>
-                                <li><a href="frmUsuario.aspx">Recuperación del desarrollo</a></li>
-
-
-                            </ul>
-
-                        </li>
-                        <li class="header">Condiciones del hogar</li>
+                            <a href="frmConsultaMunicipalPM.aspx" class=""><i class="fa fa-book"></i><span>Cuidadores utilizando guía Catrachitos</span></a></li>
                         <li class="">
-                            <a href="#" class="has-arrow"><i class="fa fa-user"></i><span>Agua y saneamiento</span></a>
+                            <a href="frmConsultaMunicipalPM.aspx" class=""><i class="fa fa-code-fork"></i><span>Detección enfermedades prevalentes</span></a></li>
+
+                    <li class="header" style="font-weight: bold; color: black; text-align: center;">Desarrollo del niño</li>
+
+                        <li class="">
+                            <a href="frmConsultaMunicipalPM.aspx" class=""><i class="fa fa-spoon"></i><span>Recuperación nutricional</span></a></li>
+                        <li class="">
+                            <a href="frmConsultaMunicipalPM.aspx" class=""><i class="fa fa-spinner"></i><span>Recuperación del desarrollo</span></a></li>
+
+                        <li class="header" style="font-weight: bold; color: black; text-align: center;">Contexto de los hogares</li>
+                        
+                        <li class="">
+                            <a href="#" class="has-arrow"><i class="fa fa-shower"></i><span>Agua y saneamiento</span></a>
                             <ul>
-                                <li><a href="frmTipoUsuario.aspx">Acceso a agua</a></li>
-                                <li><a href="frmUsuario.aspx">Agua segura</a></li>
-                                <li><a href="frmUsuario.aspx">Disponibilidad de letrina</a></li>
-                                <li><a href="frmUsuario.aspx">Manejo de basura</a></li>
+                                <li><a href="frmConsultaMunicipalPM.aspx">Acceso a agua</a></li>
+                                <li><a href="frmConsultaMunicipalPM.aspx">Agua segura</a></li>
+                                <li><a href="frmConsultaMunicipalPM.aspx">Disponibilidad de letrina</a></li>
+                                <li><a href="frmConsultaMunicipalPM.aspx">Manejo de basura</a></li>
 
 
                             </ul>
 
                         </li>
                         <li class="">
-                            <a href="#" class="has-arrow"><i class="fa fa-user"></i><span>Tipo de vivienda</span></a>
+                            <a href="#" class="has-arrow"><i class="fa fa-home"></i><span>Tipo de vivienda</span></a>
                             <ul>
-                                <li><a href="frmTipoUsuario.aspx">Disponibilidad de Piso, techo y pared de material adecuado</a></li>
-                                <li><a href="frmUsuario.aspx">Cocina adecuada</a></li>
+                                <li><a href="frmConsultaMunicipalPM.aspx">Disponibilidad de Piso, techo y pared de material adecuado</a></li>
+                                <li><a href="frmConsultaMunicipalPM.aspx">Cocina adecuada</a></li>
 
 
 
                             </ul>
 
                         </li>
-                      <% If SystemAdmin("ConsultaNominal") = "Verdadero" Then  %>
-                        <li>
 
-                            <a href="#" class="has-arrow"><i class="fa fa-search"></i><span>Consulta Nominal</span></a>
-                            <ul>
-                                <li class=""><a href="frmConsultaNominal.aspx">Busqueda Nominal</a></li>
-                                <li><a href="frmCoberturaNominal.aspx">Cobertura nominal </a></li>
+                        <% If SystemAdmin("ConsultaNominal") = "Verdadero" Then  %>
+                        <li class="header" style="font-weight: bold; color: black; text-align: center;">Consulta Nominal</li>
+                        <li class=""><a href="frmConsultaNominal.aspx"><i class="fa fa-search "></i><span>Busqueda Nominal</span></a></li>
 
-                            </ul>
-
-                        </li>
-                         
                         <%End If %>
+                        <li class="header" style="font-weight: bold; color: black; text-align: center;">Fichas técnicas de indicadores</li>
+                        <li class=""><a href="frmFichasIndicadores.aspx"><i class="fa fa-file-archive-o"></i><span>Ver fichas</span></a>
+                        </li>
                         <% If SystemAdmin("allSystem") = "Verdadero" Then  %>
 
 
 
 
 
-                        <li class="header">Configuración</li>
+                        <li class="header" style="font-weight: bold; color: black; text-align: center;">Configuración de la plataforma</li>
                         <li class="">
                             <a href="frmTema.aspx" class=""><i class="fa fa-desktop "></i><span>Tema</span></a></li>
                         <!--usuarios-->
@@ -368,7 +361,7 @@
                                 <li><a href="frmSubirFichasIndicador.aspx">Subir Fichas</a></li>
 
                                 <li><a href="frmSubirExcelDesnutricion.aspx">Subir datos destrucion</a></li>
-
+                                <li><a href="frmSubirCuidadores.aspx">Subir datos Cuidadores</a></li>
                             </ul>
 
                         </li>
@@ -379,7 +372,7 @@
 
 
                         <!-- inicio seguridad -->
-                        <li class="header">Seguridad</li>
+                        <li class="header" style="font-weight: bold; color: black; text-align: center;">Seguridad del sistema</li>
                         <!--accesos-->
                         <li class="">
                             <a href="frmTipoUsuarioAccesos.aspx" class=""><i class="fa fa-key"></i><span>Accesos</span></a></li>

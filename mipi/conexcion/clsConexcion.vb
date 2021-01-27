@@ -8,7 +8,7 @@ Public Class clsConexcion
     'String Conexion
     Public Sub New()
         'str_con = "Data Source=DESKTOP-C6132IG\SQLEXPRESS ;Initial Catalog=mipi; Min Pool Size=0;Max Pool Size=1024;Pooling=true;  Integrated Security = True;"
-        str_con = "Data Source=sql5041.site4now.net;Initial Catalog=DB_A624F7_mipi;User Id=DB_A624F7_mipi_admin;Password=@Tatiana1987;"
+        str_con = "Data Source=sql5052.site4now.net;Initial Catalog=DB_A624F7_desarrollo;User Id=DB_A624F7_desarrollo_admin;Password=@Tatiana1987;"
         str_con_seduc = "Data Source=190.130.17.247;Initial Catalog=SERNP;User Id=aplicaciones;Password=4pp2oi7g0bab.;"
         str_con_seduc_matricula = "Data Source=190.130.17.247;Initial Catalog=BI_SEDUC;User Id=aplicaciones;Password=4pp2oi7g0bab.;"
     End Sub

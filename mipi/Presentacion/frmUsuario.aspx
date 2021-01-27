@@ -91,11 +91,7 @@
                 <div class="header">
                     <h6 class="text-center ">LISTADO DE USUARIOS </h6>
 
-                    <div class="btn-group-sm">
-
-                        <button type="button" class="btn btn-round btn-success  pull-right" data-toggle="modal" data-target=".Form-Wizard-modal">Instrucciones</button>
-                        <br />
-                    </div>
+                 
                 </div>
                 <!--tabla para actualizar -->
 

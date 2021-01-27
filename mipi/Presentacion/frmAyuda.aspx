@@ -25,7 +25,7 @@
                                 </div>                                
                                 <div id="collapseOne-faqs" class="collapse" aria-labelledby="headingOne" data-parent="#accordion-faqs" style="">
                                     <div class="body">
-                               En cada pagina donde usted tenga acceso, en la parte superior tendrá los botones de ayuda y de información, los cuales sirven de guías sobre el contenido que aparece y las herramientas que se le presentan.
+                               En cada página donde usted tenga acceso, en la parte superior tendrá los botones de ayuda y de información, los cuales sirven de guías sobre el contenido que aparece y las herramientas que se le presentan. Estos botones son:
                                     </div>
                                 </div>
                             </div>
@@ -39,36 +39,22 @@
                                 </div>
                                 <div id="collapseTwo-faqs" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion-faqs" style="">
                                     <div class="body">
-                                   En esta plataforma de acuerdo con los privilegios que tenga el usuario podrá acceder al módulo de prestación de servicios de primera infancia, el cual se divide en Gestantes y Puérperas, Niños y Niñas, Madres y Cuidadores, los cuales se subdividen en nivel nacional, departamental y municipal.
-                                    </div>
+                                <p>En el lado derecho de la página de inicio se encuentra el acceso a los módulos  de esta plataforma (algunos de ellos aún en construcción). De acuerdo con los privilegios que tenga el usuario podrá acceder a los siguientes módulos: </p>
+<p>Cobertura de prestaciones de servicio: muestra indicadores de cobertura de las prestaciones de servicio que el país ha definido como prioritarias para la primera infancia. </p>
+<p>Competencias de cuidadores: muestra indicadores de conocimientos y prácticas adquiridos por los cuidadores para la crianza adecuada de los menores de seis años. </p>
+<p>Desarrollo del niño: este módulo muestra los indicadores de impacto en la primera infancia, entre ellos: nutrición, desarrollo infantil, etc. </p>
+<p>Condiciones  del hogar: muestra indicadores de acceso de los hogares a agua, saneamiento, piso, techo, pared adecuada, y otros indicadores del contexto en que viven los hogares con niños menores de 6 años como pobreza, amenazas ambientales, etc. </p>
+<p>Fichas técnicas de indicadores: podrá encontrar las fichas que explican cómo se ha calculado cada indicador incluido en MIPI . </p>
+<p>Consulta nominal: este módulo (restringido para algunos usuarios) muestra los servicios recibidos por cada niño menor de seis años. </p>
+                    </div>
                                 </div>
                             </div>
 
                             <div>
-                                <div class="card-header" id="headingThree">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree-faqs" aria-expanded="false" aria-controls="collapseThree">
-                                        Pregunta: ¿Qué indicadores podre visualizar?
-                                    </button>
-                                </h5>
-                                </div>
+                           
                                 <div id="collapseThree-faqs" class="collapse" aria-labelledby="headingThree" data-parent="#accordion-faqs" style="">
                                     <div class="body">
-                                     <p>   1.	Atención Pre natal</p>
- <p>2.	Atención de parto</p>
- <p>3.	Atención Puerperal </p>
- <p>4.	Promoción de lactancia materna exclusiva</p>
- <p>5.	Vigilancia nutricional.</p>
- <p>6.	Detección temprana de signos de peligro de las enfermedades prevalentes de la infancia.</p>
- <p>7.	Atención integral a niños con enfermedades prevalentes de la infancia.</p>
- <p>8.	Vacunación infantil</p>
- <p>9.	Agua y saneamiento.</p>
- <p>10.	Educación Inicial.</p>
- <p>11.	Educación prebásica.</p>
- <p>12.	Alimentación  preescolar.</p>
- <p>13.	Espacios públicos para el arte, cultura y deporte.</p>
- <p>14.	Inscripción del nacimiento.</p>
- <p>15.	Protección a la primera infancia2.</p>
+                                 
 
                                             </div>
                                 </div>

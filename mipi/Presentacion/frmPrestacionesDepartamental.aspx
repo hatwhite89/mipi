@@ -22,8 +22,8 @@
                         <div class="body">
                 <ul class="nav nav-tabs3">
                                 <li class="nav-item"><a class="nav-link "  href="frmPrestacionesNacional.aspx">Nacional</a></li>
-                                <li class="nav-item"><a class="nav-link  active show "  href="frmPrestacionesDepartalmental.aspx">Departamental</a></li>
-                                <li class="nav-item"><a class="nav-link "  href#">Municipal</a></li>
+                                <li class="nav-item"><a class="nav-link  active show "  href="frmPrestacionesDepartamental.aspx">Departamental</a></li>
+                                <li class="nav-item"><a class="nav-link "   href="frmPrestacionesMunicipal.aspx">Municipal</a></li>
                             </ul>
                             <div class="tab-content">
                              
@@ -31,7 +31,7 @@
                              
                        
                                      <div class="embed-responsive embed-responsive-16by9">
-  <iframe class="embed-responsive-item" src="https://app.powerbi.com/view?r=eyJrIjoiNDUyOGFmYjktMTUwZC00NmIyLWExN2QtY2ZhZmEyMmQzZDhlIiwidCI6ImRhZGNlMjlhLTIyZWItNGNlNC1hOGMwLWJiYmM1ODY3NTgxMiJ9"></iframe>
+  <iframe class="embed-responsive-item" src="https://app.powerbi.com/view?r=eyJrIjoiMTljOGQyMTktODgyMy00NjIzLWFlNDUtMDEwNDM5MWI3ZWY3IiwidCI6ImRhZGNlMjlhLTIyZWItNGNlNC1hOGMwLWJiYmM1ODY3NTgxMiJ9"></iframe>
 </div>                  </div>       
                          
                             </div>

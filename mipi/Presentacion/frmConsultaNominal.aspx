@@ -3,12 +3,18 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <form runat="server">
 
-          
+           <div class="block-header">
+                <div class="row clearfix">
+                    <div class="col-md-12 col-sm-12">
+                        <h1 class="text-center ">Consulta nominal</h1>
+                    </div>     
+                </div>
+            </div>
 			<div class="row clearfix">
                 <div class="col-lg-12 col-md-12">
                     <div class="card">
                         <div class="header">
-                            <h2>Busqueda Nominal </h2>
+                           
                         </div>
                         <div class="body">
                           
@@ -27,7 +33,7 @@
                             
                            
 							<div class="header">
-								<h2>Informacion del infante</h2>
+								<h2>Información del infante</h2>
 							</div>
                             <asp:Label ID="Label1" runat="server" Text="Nombres"></asp:Label>
                             <asp:TextBox ID="TextBox1" CssClass="form-control" runat="server"></asp:TextBox>
@@ -55,8 +61,8 @@
 			<div class="row clearfix">
                 <div class="col-lg-12 col-md-12">
                     <div class="card">
-                        <div class="header">
-                            <h2>Indicadores</h2>
+                        <div class="header  ">
+                          <center> <h2>Prestaciones</h2></center> 
                         </div>
                         <div class="body">
                             <div class="col-12-md">
@@ -73,55 +79,114 @@
 											</thead>
 											<tbody>
 											
-										
-										<% If RecuperarIndicador2() <> "" Then %>
-										
+									
+
+												
+													
+										<% If RecuperarIndicador3() <> "" Then %>
 												<tr>
 													<th class="w60">1</th>
-													<td>Educación Inicial</td>
-												<td><span class="badge badge-primary">Atención prestada</span></td>
-													<td><span class="badge badge-primary">SI</span></td>
+													<td>Inscripción del nacimiento</td>
+													<td><span class="badge badge-primary">Atención documentada</span></td>
+												
 												</tr>
 												<%Else %>
 												<tr>
 													<th class="w60">1</th>
-													<td>Educación Inicial</td>
-												<td><span class="badge badge-danger">Atención no prestada</span></td>
+													<td>Inscripción del nacimiento</td>
+													<td><span class="badge badge-danger">Atención no documentada</span></td>
 												
 												</tr>
-												<%End If %>
-
+											<%End If %>
 													<% If RecuperarIndicador1() = "1" Then %>
 												<tr>
 													<th class="w60">2</th>
 													<td>Educación prebásica</td>
-													<td><span class="badge badge-primary">Atención prestada</span></td>
+													<td><span class="badge badge-primary">Atención documentada</span></td>
 												
 												</tr>
 													<%Else %>
 													<tr>
 													<th class="w60">2</th>
 													<td>Educación prebásica</td>
-													<td><span class="badge badge-danger">Atención no prestada</span></td>
+													<td><span class="badge badge-danger">Atención no documentada</span></td>
 												
 												</tr>
 													<%End If %>
+													<tr>
+													<th class="w60">3</th>
+													<td>Atención Pre natal</td>
+													<td><span class="badge badge-danger">Atención no documentada</span></td>
+												
+												</tr>
+													<tr>
+													<th class="w60">4</th>
+													<td>Atención de parto</td>
+													<td><span class="badge badge-danger">Atención no documentada</span></td>
+												
+												</tr>
+													<tr>
+													<th class="w60">5</th>
+													<td>Promoción de lactancia materna exclusiva</td>
+													<td><span class="badge badge-danger">Atención no documentada</span></td>
+												
+												</tr>
+													<tr>
+													<th class="w60">6</th>
+													<td>Vigilancia nutricional</td>
+													<td><span class="badge badge-danger">Atención no documentada</span></td>
+												
+												</tr>
+													<tr>
+													<th class="w60">7</th>
+													<td>Detección temprana de signos de peligro de las enfermedades prevalentes de la infancia</td>
+													<td><span class="badge badge-danger">Atención no documentada</span></td>
+												
+												</tr>
+													<tr>
+													<th class="w60">8</th>
+													<td>Atención integral a niños con enfermedades prevalentes de la infancia</td>
+													<td><span class="badge badge-danger">Atención no documentada</span></td>
+												
+												</tr>
+													<tr>
+													<th class="w60">9</th>
+													<td>Vacunación infantil</td>
+													<td><span class="badge badge-danger">Atención no documentada</span></td>
+												
+												</tr>
+													<tr>
+													<th class="w60">10</th>
+													<td>Agua y saneamiento</td>
+													<td><span class="badge badge-danger">Atención no documentada</span></td>
+												
+												</tr>
+													<tr>
+													<th class="w60">11</th>
+													<td>Educación Inicial</td>
+													<td><span class="badge badge-danger">Atención no documentada</span></td>
+												
+												</tr>
+													<tr>
+													<th class="w60">12</th>
+													<td>Merienda preescolar</td>
+													<td><span class="badge badge-danger">Atención no documentada</span></td>
+												
+												</tr>
 													
-										<% If RecuperarIndicador3() <> "" Then %>
-												<tr>
-													<th class="w60">3</th>
-													<td>Inscripción del nacimiento</td>
-													<td><span class="badge badge-primary">Atención prestada</span></td>
+													<tr>
+													<th class="w60">13</th>
+													<td>Espacios públicos para el arte, cultura y deporte</td>
+													<td><span class="badge badge-danger">Atención no documentada</span></td>
 												
 												</tr>
-												<%Else %>
-												<tr>
-													<th class="w60">3</th>
-													<td>Inscripción del nacimiento</td>
-													<td><span class="badge badge-danger">Atención no prestada</span></td>
+												
+													<tr>
+													<th class="w60">14</th>
+													<td>Protección a la primera infancia2</td>
+													<td><span class="badge badge-danger">Atención no documentada</span></td>
 												
 												</tr>
-											<%End If %>
 											</tbody>
 										</table>
 									</div>

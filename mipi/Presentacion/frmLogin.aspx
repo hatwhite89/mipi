@@ -138,7 +138,7 @@ window.onclick = function(event) {
 
     <div class="auth_div ">
         <div class="">
-            <a class="navbar-brand" href="javascript:void(0);"><img src="../Content/imagenes/mipi.png" height="50"   class="d-inline-block align-top mr-2" alt=""></a>
+            <a class="navbar-brand" href="javascript:void(0);"><img src="../Content/MIPI_2.png" height="50"   class="d-inline-block align-top mr-2" alt=""></a>
         <br />
         </div>
         <div class="card">

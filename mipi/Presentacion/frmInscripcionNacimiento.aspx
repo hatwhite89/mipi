@@ -20,15 +20,15 @@
                    
                         <div class="body">
                             <ul class="nav nav-tabs3">
-                                <li class="nav-item"><a class="nav-link"  href="frmConsultaNacional.aspx">Nacional</a></li>
-                                <li class="nav-item"><a class="nav-link   active show"  href="frmConsultaDepartamental.aspx">Departamental</a></li>
-                                <li class="nav-item"><a class="nav-link"  href="frmConsultaMunicipal2.aspx">Municipal</a></li>
+                               <li class="nav-item"><a class="nav-link   "  href="frmInscripcionNacimientoNacional.aspx">Nacional</a></li>
+                                <li class="nav-item"><a class="nav-link   active show"  href="frmInscripcionNacimiento.aspx">Departamental</a></li>
+                                <li class="nav-item"><a class="nav-link"  href="frmInscripcionNacimientosMunicipal.aspx">Municipal</a></li>
                             </ul>
                             <div class="tab-content">
                              
                                 <div class="tab-pane  show active" >
                                      <div class="embed-responsive embed-responsive-16by9">
-  <iframe class="embed-responsive-item" src="https://app.powerbi.com/reportEmbed?reportId=6e7eb7ec-7b86-4d5a-a602-3ca2bea9fa5d&autoAuth=true&ctid=dadce29a-22eb-4ce4-a8c0-bbbc58675812&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly93YWJpLXBhYXMtMS1zY3VzLXJlZGlyZWN0LmFuYWx5c2lzLndpbmRvd3MubmV0LyJ9"></iframe>
+  <iframe class="embed-responsive-item" src="https://app.powerbi.com/view?r=eyJrIjoiYzEwYmIzMDUtMWNmYy00ZGNmLWE5YzctN2EwOWE5NTAzNzNiIiwidCI6ImRhZGNlMjlhLTIyZWItNGNlNC1hOGMwLWJiYmM1ODY3NTgxMiJ9"></iframe>
 </div>                  </div>
                          
                             </div>

@@ -76,11 +76,7 @@
                       <div class="header">
                     <h6 class="text-center ">LISTADO DE MUNICIPIOS </h6>
 
-                    <div class="btn-group-sm">
-
-                        <button type="button" class="btn btn-round btn-success  pull-right" data-toggle="modal" data-target=".Form-Wizard-modal">Instrucciones</button>
-                        <br />
-                    </div>
+          
                 </div>
                 <!--tabla para actualizar -->
                 <asp:GridView ID="GridView1" ShowSelectButton="True"  runat="server" AutoGenerateColumns="False" DataKeyNames="id_municipio,nombre_municipio,id_municipio_externo,id_departamento,nombre_departamento"  CssClass="" AllowPaging="True" CellPadding="8" ForeColor="#333333" GridLines="None" >

@@ -3,7 +3,7 @@
 Public Class clsConexcion
     Private sqlcon As SqlConnection
     Public str_con As String
-    Public str_con_seduc As String
+    Public str_con_seduc, str_con_rnp As String
     Public str_con_seduc_matricula As String
     'String Conexion
     Public Sub New()
@@ -11,6 +11,7 @@ Public Class clsConexcion
         str_con = "Data Source=sql5052.site4now.net;Initial Catalog=DB_A624F7_desarrollo;User Id=DB_A624F7_desarrollo_admin;Password=@Tatiana1987;"
         str_con_seduc = "Data Source=190.130.17.247;Initial Catalog=SERNP;User Id=aplicaciones;Password=4pp2oi7g0bab.;"
         str_con_seduc_matricula = "Data Source=190.130.17.247;Initial Catalog=BI_SEDUC;User Id=aplicaciones;Password=4pp2oi7g0bab.;"
+        str_con_rnp = "Data Source=190.5.70.253;Initial Catalog=MIPI;User Id=WSPrimeraInfancia;Password=@!asfop8sc41ert;"
     End Sub
 
     Public Function getConexion() As SqlConnection
